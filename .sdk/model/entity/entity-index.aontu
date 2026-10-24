@@ -1,0 +1,18 @@
+# Entity Models
+
+@"./audio.aontu"
+@"./bible.aontu"
+@"./citation.aontu"
+@"./embedding.aontu"
+@"./entity.aontu"
+@"./feedback.aontu"
+@"./language.aontu"
+@"./ogn.aontu"
+@"./paper.aontu"
+@"./paragraph.aontu"
+@"./quote.aontu"
+@"./scripture.aontu"
+@"./search.aontu"
+@"./table_of_content.aontu"
+@"./tool.aontu"
+@"./work.aontu"

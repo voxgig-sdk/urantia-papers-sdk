@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "audio": {
+      "AUDIO00": {
+        "audio": "s14",
+        "id": "AUDIO00"
+      },
+      "AUDIO01": {
+        "audio": "s28",
+        "id": "AUDIO01"
+      },
+      "AUDIO02": {
+        "audio": "s3c",
+        "id": "AUDIO02"
+      }
+    }
+  },
+  "new": {
+    "audio": {
+      "audio_ref01": {
+        "audio": "s50"
+      }
+    }
+  },
+  "requests": {
+    "GET /audio/{ref}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+# Entity: embedding
+
+main: kit: entity: embedding: {
+
+  alias: field: {}
+
+  fields: {
+    dimensions: {
+      h: "Dimensions"
+      n: "dimensions"
+      r: true
+      t: "`$INTEGER`"
+    }
+    embedding: {
+      h: "Embedding"
+      n: "embedding"
+      r: true
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    model: {
+      h: "Model"
+      n: "model"
+      r: true
+      t: "`$STRING`"
+    }
+    standardReferenceId: {
+      h: "Standard Reference Id"
+      n: "standardReferenceId"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "embedding"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /embeddings/{ref}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "2:5.1"
+                k: "param"
+                n: "id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "large"
+                k: "query"
+                n: "model"
+                or: "model"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/embeddings/{ref}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "embeddings"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /embeddings/export"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "jsonl"
+                k: "query"
+                n: "format"
+                or: "format"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "large"
+                k: "query"
+                n: "model"
+                or: "model"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "2"
+                k: "query"
+                n: "paper_id"
+                or: "paperId"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/embeddings/export"
+          q: {
+            "$action": "export"
+            exist: [
+              "paper_id"
+            ]
+          }
+          s: [
+            {
+              lit: "embeddings"
+            }
+            {
+              lit: "export"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

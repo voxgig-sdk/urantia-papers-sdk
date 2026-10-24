@@ -1,0 +1,259 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 16
+  metrics: count: path: 43
+  metrics: count: method: 47
+
+  entity: audio: {
+    path: "/audio/{ref}": {
+      rename: param: "ref": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: bible: {
+    path: "/bible/books": {
+      action: "book": {}
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/bible/search/semantic": {
+      op: create: method: *POST
+    }
+    path: "/bible/{bookCode}": {
+      rename: param: "bookCode": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/bible/{bookCode}/{chapter}": {
+      rename: param: "bookCode": *"book_code"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/bible/{bookCode}/{chapter}/{verse}": {
+      rename: param: "bookCode": *"book_code"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/bible/{bookCode}/{chapter}/{verse}/urantia-parallels": {
+      rename: param: "bookCode": *"book_code"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: citation: {
+    path: "/cite": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: embedding: {
+    path: "/embeddings/export": {
+      action: "export": {}
+      op: load: method: *GET
+    }
+    path: "/embeddings/{ref}": {
+      rename: param: "ref": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: entity: {
+    path: "/entities": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/entities/{id}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/entities/{id}/paragraphs": {
+      action: "paragraph": {}
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: feedback: {
+    path: "/feedback": {
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+      op: create: transform: req: "category": *("`reqdata.category`")|top
+      op: create: transform: req: "client": *("`reqdata.client`")|top
+      op: create: transform: req: "contact": *("`reqdata.contact`")|top
+      op: create: transform: req: "endpoint": *("`reqdata.endpoint`")|top
+      op: create: transform: req: "message": *("`reqdata.message`")|top
+      op: create: transform: req: "pageUrl": *("`reqdata.page_url`")|top
+      op: create: transform: req: "ref": *("`reqdata.ref`")|top
+      op: create: transform: req: "requestId": *("`reqdata.request_id`")|top
+    }
+  }
+
+  entity: language: {
+    path: "/languages": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: ogn: {
+    path: "/og/{ref}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: paper: {
+    path: "/papers": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/papers/{id}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/papers/{id}/sections": {
+      action: "section": {}
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: paragraph: {
+    path: "/paragraphs/random": {
+      action: "random": {}
+      op: load: method: *GET
+    }
+    path: "/paragraphs/{ref}": {
+      rename: param: "ref": *"id"
+      op: load: method: *GET
+    }
+    path: "/paragraphs/{ref}/context": {
+      action: "context": {}
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: quote: {
+    path: "/quotes/verify": {
+      action: "verify": {}
+      op: create: method: *POST
+      op: create: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: scripture: {
+    path: "/scriptures": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/scriptures/insights/far": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/scriptures/insights/leans": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/scriptures/insights/pairs": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/scriptures/insights/shared-currents": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/scriptures/search/semantic": {
+      op: create: method: *POST
+    }
+    path: "/scriptures/{corpus}": {
+      rename: param: "corpus": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/scriptures/{corpus}/{ref}": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/scriptures/{corpus}/{ref}/urantia-parallels": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: search: {
+    path: "/search": {
+      op: create: method: *POST
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/search/semantic": {
+      action: "semantic": {}
+      op: create: method: *POST
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: table_of_content: {
+    path: "/toc": {
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+  entity: tool: {
+    path: "/tools/anthropic": {
+      action: "anthropic": {}
+      op: list: method: *GET
+      op: list: transform: res: *("`body.tools`")|top
+    }
+    path: "/tools/openai": {
+      action: "openai": {}
+      op: list: method: *GET
+      op: list: transform: res: *("`body.tools`")|top
+    }
+  }
+
+  entity: work: {
+    path: "/works": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/works/search": {
+      action: "search": {}
+      op: create: method: *POST
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/works/search/semantic": {
+      op: create: method: *POST
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/works/{work}/{ref}": {
+      op: load: method: *GET
+    }
+    path: "/works/{work}/{ref}/urantia-parallels": {
+      action: "urantia_parallel": {}
+      rename: param: "work": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+    path: "/works/{work}/{ref}/work-parallels": {
+      action: "work_parallel": {}
+      rename: param: "work": *"id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.data`")|top
+    }
+  }
+
+}

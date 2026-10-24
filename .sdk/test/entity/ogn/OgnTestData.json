@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "ogn": {
+      "OGN00": {
+        "ref": "REF01",
+        "id": "OGN00"
+      },
+      "OGN01": {
+        "ref": "REF01",
+        "id": "OGN01"
+      },
+      "OGN02": {
+        "ref": "REF01",
+        "id": "OGN02"
+      }
+    }
+  },
+  "new": {
+    "ogn": {
+      "ogn_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /og/{ref}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

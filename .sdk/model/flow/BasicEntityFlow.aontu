@@ -1,0 +1,44 @@
+# BasicEntityFlow
+
+main: kit: flow: BasicEntityFlow:
+{
+  entity: "entity",
+  kind: "basic",
+  name: "BasicEntityFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "entity_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "entity_ref01",
+        srcdatavar: "entity_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "entity01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-entity_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicEntityFlow"
+}

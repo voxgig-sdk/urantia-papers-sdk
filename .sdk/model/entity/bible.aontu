@@ -1,0 +1,501 @@
+# Entity: bible
+
+main: kit: entity: bible: {
+
+  alias: field: {}
+
+  fields: {
+    abbr: {
+      h: "Abbr"
+      n: "abbr"
+      r: true
+      t: "`$STRING`"
+    }
+    bookCode: {
+      h: "Book Code"
+      n: "bookCode"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    bookName: {
+      h: "Book Name"
+      n: "bookName"
+      r: true
+      t: "`$STRING`"
+    }
+    bookOrder: {
+      h: "Book Order"
+      n: "bookOrder"
+      r: true
+      t: "`$INTEGER`"
+    }
+    canon: {
+      h: "Canon"
+      n: "canon"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    chapter: {
+      h: "Chapter"
+      n: "chapter"
+      r: true
+      t: "`$INTEGER`"
+    }
+    chapterCount: {
+      h: "Chapter Count"
+      n: "chapterCount"
+      r: true
+      t: "`$INTEGER`"
+    }
+    chunk: {
+      h: "Chunk"
+      n: "chunk"
+      r: true
+      t: "`$OBJECT`"
+    }
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$ARRAY`"
+    }
+    fullName: {
+      h: "Full Name"
+      n: "fullName"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    limit: {
+      h: "Limit"
+      n: "limit"
+      r: false
+      t: "`$INTEGER`"
+    }
+    meta: {
+      h: "Meta"
+      n: "meta"
+      r: true
+      t: "`$OBJECT`"
+    }
+    page: {
+      h: "Page"
+      n: "page"
+      r: false
+      t: "`$INTEGER`"
+    }
+    q: {
+      h: "Q"
+      n: "q"
+      r: true
+      t: "`$STRING`"
+    }
+    reference: {
+      h: "Reference"
+      n: "reference"
+      r: true
+      t: "`$STRING`"
+    }
+    text: {
+      h: "Text"
+      n: "text"
+      r: true
+      t: "`$STRING`"
+    }
+    translation: {
+      h: "Translation"
+      n: "translation"
+      r: true
+      t: "`$STRING`"
+    }
+    urantiaParallelLimit: {
+      h: "Urantia Parallel Limit"
+      n: "urantiaParallelLimit"
+      r: false
+      t: "`$INTEGER`"
+    }
+    urantiaParallels: {
+      h: "Urantia Parallels"
+      n: "urantiaParallels"
+      r: true
+      t: "`$ARRAY`"
+    }
+    verse: {
+      h: "Verse"
+      n: "verse"
+      r: true
+      t: "`$INTEGER`"
+    }
+    verseCount: {
+      h: "Verse Count"
+      n: "verseCount"
+      r: true
+      t: "`$INTEGER`"
+    }
+    verses: {
+      h: "Verses"
+      n: "verses"
+      r: true
+      t: "`$ARRAY`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "bible"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "bookCode"
+            "canon"
+            "limit"
+            "page"
+            "q"
+            "urantiaParallelLimit"
+          ]
+          co: {
+            id: "POST /bible/search/semantic"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/bible/search/semantic"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "bible"
+            }
+            {
+              lit: "search"
+            }
+            {
+              lit: "semantic"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /bible/books"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/bible/books"
+          q: {
+            "$action": "book"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "bible"
+            }
+            {
+              lit: "books"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /bible/{bookCode}/{chapter}/{verse}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "MAT"
+                k: "param"
+                n: "book_code"
+                or: "bookCode"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: 5
+                k: "param"
+                n: "chapter"
+                or: "chapter"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 3
+                k: "param"
+                n: "verse"
+                or: "verse"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/bible/{bookCode}/{chapter}/{verse}"
+          q: {
+            exist: [
+              "book_code"
+              "chapter"
+              "verse"
+            ]
+          }
+          r: {
+            param: {
+              bookCode: "book_code"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "bible"
+            }
+            {
+              var: "book_code"
+            }
+            {
+              var: "chapter"
+            }
+            {
+              var: "verse"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /bible/{bookCode}/{chapter}/{verse}/urantia-parallels"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "MAT"
+                k: "param"
+                n: "book_code"
+                or: "bookCode"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: 5
+                k: "param"
+                n: "chapter"
+                or: "chapter"
+                r: true
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 3
+                k: "param"
+                n: "verse"
+                or: "verse"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/bible/{bookCode}/{chapter}/{verse}/urantia-parallels"
+          q: {
+            exist: [
+              "book_code"
+              "chapter"
+              "verse"
+            ]
+          }
+          r: {
+            param: {
+              bookCode: "book_code"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "bible"
+            }
+            {
+              var: "book_code"
+            }
+            {
+              var: "chapter"
+            }
+            {
+              var: "verse"
+            }
+            {
+              lit: "urantia-parallels"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /bible/{bookCode}/{chapter}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "MAT"
+                k: "param"
+                n: "book_code"
+                or: "bookCode"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: 5
+                k: "param"
+                n: "chapter"
+                or: "chapter"
+                r: true
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/bible/{bookCode}/{chapter}"
+          q: {
+            exist: [
+              "book_code"
+              "chapter"
+            ]
+          }
+          r: {
+            param: {
+              bookCode: "book_code"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "bible"
+            }
+            {
+              var: "book_code"
+            }
+            {
+              var: "chapter"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /bible/{bookCode}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "MAT"
+                k: "param"
+                n: "id"
+                or: "bookCode"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/bible/{bookCode}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              bookCode: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "bible"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

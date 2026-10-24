@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "table_of_content": {
+      "TABLE_OF_CONTENT00": {
+        "parts": [],
+        "id": "TABLE_OF_CONTENT00"
+      },
+      "TABLE_OF_CONTENT01": {
+        "parts": [],
+        "id": "TABLE_OF_CONTENT01"
+      },
+      "TABLE_OF_CONTENT02": {
+        "parts": [],
+        "id": "TABLE_OF_CONTENT02"
+      }
+    }
+  },
+  "new": {
+    "table_of_content": {
+      "table_of_content_ref01": {
+        "parts": []
+      }
+    }
+  },
+  "requests": {
+    "GET /toc": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

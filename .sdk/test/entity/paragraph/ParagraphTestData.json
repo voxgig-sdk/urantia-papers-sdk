@@ -1,0 +1,49 @@
+{
+  "existing": {
+    "paragraph": {
+      "PARAGRAPH00": {
+        "data": {},
+        "id": "PARAGRAPH00",
+        "navigation": {},
+        "ref": "REF01"
+      },
+      "PARAGRAPH01": {
+        "data": {},
+        "id": "PARAGRAPH01",
+        "navigation": {},
+        "ref": "REF01"
+      },
+      "PARAGRAPH02": {
+        "data": {},
+        "id": "PARAGRAPH02",
+        "navigation": {},
+        "ref": "REF01"
+      }
+    }
+  },
+  "new": {
+    "paragraph": {
+      "paragraph_ref01": {
+        "data": {},
+        "navigation": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /paragraphs/{ref}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /paragraphs/{ref}/context": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /paragraphs/random": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

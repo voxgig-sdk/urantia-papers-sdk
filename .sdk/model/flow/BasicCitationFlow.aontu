@@ -1,0 +1,28 @@
+# BasicCitationFlow
+
+main: kit: flow: BasicCitationFlow:
+{
+  entity: "citation",
+  kind: "basic",
+  name: "BasicCitationFlow",
+  step: [
+    {
+      i: {
+        ref: "citation_ref01",
+        srcdatavar: "citation_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-citation_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCitationFlow"
+}

@@ -1,0 +1,86 @@
+# Entity: citation
+
+main: kit: entity: citation: {
+
+  alias: field: {}
+
+  fields: {
+    citation: {
+      h: "Citation"
+      n: "citation"
+      r: true
+      t: "`$STRING`"
+    }
+    ref: {
+      h: "Ref"
+      n: "ref"
+      r: true
+      t: "`$STRING`"
+    }
+    style: {
+      h: "Style"
+      n: "style"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "citation"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /cite"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "2:5.1"
+                k: "query"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "apa"
+                k: "query"
+                n: "style"
+                or: "style"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/cite"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "cite"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,844 @@
+# Entity: scripture
+
+main: kit: entity: scripture: {
+
+  alias: field: {}
+
+  fields: {
+    chunk: {
+      h: "Chunk"
+      n: "chunk"
+      r: true
+      t: "`$OBJECT`"
+    }
+    closest: {
+      h: "Closest"
+      n: "closest"
+      r: true
+      t: "`$ARRAY`"
+    }
+    consensus: {
+      h: "Consensus"
+      n: "consensus"
+      r: true
+      sh: "Mean percentile across the texts, 0 to 1"
+      t: "`$NUMBER`"
+    }
+    corpus: {
+      h: "Corpus"
+      n: "corpus"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      sh: "Corpus id, slug, or ref prefix, e.g."
+      t: "`$OBJECT`"
+    }
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$ARRAY`"
+    }
+    distance: {
+      h: "Distance"
+      n: "distance"
+      r: true
+      sh: "1 minus the highest percentile, 0 to 1"
+      t: "`$NUMBER`"
+    }
+    divisionLabel: {
+      h: "Division Label"
+      n: "divisionLabel"
+      r: true
+      t: "`$STRING`"
+    }
+    divisions: {
+      h: "Divisions"
+      n: "divisions"
+      r: true
+      t: "`$ARRAY`"
+    }
+    gap: {
+      h: "Gap"
+      n: "gap"
+      r: true
+      sh: "How far this text's percentile is above the paragraph's mean across texts"
+      t: "`$NUMBER`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    license: {
+      h: "License"
+      n: "license"
+      r: true
+      t: "`$STRING`"
+    }
+    limit: {
+      h: "Limit"
+      n: "limit"
+      r: false
+      t: "`$INTEGER`"
+    }
+    meta: {
+      h: "Meta"
+      n: "meta"
+      r: true
+      t: "`$OBJECT`"
+    }
+    notes: {
+      h: "Notes"
+      n: "notes"
+      r: true
+      sh: "How the text is numbered or selected"
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    page: {
+      h: "Page"
+      n: "page"
+      r: false
+      t: "`$INTEGER`"
+    }
+    pages: {
+      h: "Pages"
+      n: "pages"
+      r: true
+      sh: "The reading pages of the work, in order: one division, or one subdivision for a work with three reference levels."
+      t: "`$ARRAY`"
+    }
+    paragraph: {
+      h: "Paragraph"
+      n: "paragraph"
+      r: true
+      t: "`$OBJECT`"
+    }
+    passage: {
+      h: "Passage"
+      n: "passage"
+      r: true
+      t: "`$OBJECT`"
+    }
+    passageCount: {
+      h: "Passage Count"
+      n: "passageCount"
+      r: true
+      t: "`$INTEGER`"
+    }
+    passages: {
+      h: "Passages"
+      n: "passages"
+      r: true
+      t: "`$ARRAY`"
+    }
+    percentile: {
+      h: "Percentile"
+      n: "percentile"
+      r: true
+      t: "`$NUMBER`"
+    }
+    q: {
+      h: "Q"
+      n: "q"
+      r: true
+      t: "`$STRING`"
+    }
+    refLevels: {
+      h: "Ref Levels"
+      n: "refLevels"
+      r: true
+      sh: "Numbers in a full ref: 1 for `Dhp 183`, 2 for `BG 2.47`, 3 for `Epictetus 3.22.5`"
+      t: "`$INTEGER`"
+    }
+    refPrefix: {
+      h: "Ref Prefix"
+      n: "refPrefix"
+      r: true
+      t: "`$STRING`"
+    }
+    religion: {
+      h: "Religion"
+      n: "religion"
+      r: true
+      t: "`$STRING`"
+    }
+    similarity: {
+      h: "Similarity"
+      n: "similarity"
+      r: true
+      sh: "text-embedding-3-large cosine similarity"
+      t: "`$NUMBER`"
+    }
+    similaritySmall: {
+      h: "Similarity Small"
+      n: "similaritySmall"
+      r: true
+      sh: "text-embedding-3-small cosine similarity"
+      t: "`$NUMBER`"
+    }
+    slug: {
+      h: "Slug"
+      n: "slug"
+      r: true
+      t: "`$STRING`"
+    }
+    sourceUrl: {
+      h: "Source Url"
+      n: "sourceUrl"
+      r: true
+      t: "`$STRING`"
+    }
+    textsClose: {
+      h: "Texts Close"
+      n: "textsClose"
+      r: true
+      sh: "Texts that have this paragraph in their top 10%"
+      t: "`$INTEGER`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: true
+      t: "`$STRING`"
+    }
+    translator: {
+      h: "Translator"
+      n: "translator"
+      r: true
+      t: "`$STRING`"
+    }
+    unitLabel: {
+      h: "Unit Label"
+      n: "unitLabel"
+      r: true
+      t: "`$STRING`"
+    }
+    urantiaParallelLimit: {
+      h: "Urantia Parallel Limit"
+      n: "urantiaParallelLimit"
+      r: false
+      t: "`$INTEGER`"
+    }
+    urantiaParallels: {
+      h: "Urantia Parallels"
+      n: "urantiaParallels"
+      r: true
+      t: "`$ARRAY`"
+    }
+    urantiaSection: {
+      h: "Urantia Section"
+      n: "urantiaSection"
+      r: true
+      sh: "The Paper 131 section headed with this religion, or null when Paper 131 has no such heading"
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    year: {
+      h: "Year"
+      n: "year"
+      r: true
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "scripture"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "corpus"
+            "limit"
+            "page"
+            "q"
+            "urantiaParallelLimit"
+          ]
+          co: {
+            id: "POST /scriptures/search/semantic"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/scriptures/search/semantic"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "scriptures"
+            }
+            {
+              lit: "search"
+            }
+            {
+              lit: "semantic"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /scriptures"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/scriptures"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "scriptures"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /scriptures/insights/far"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 200
+                k: "query"
+                n: "min_length"
+                or: "minLength"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                ex: "2"
+                k: "query"
+                n: "paper_id"
+                or: "paperId"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                k: "query"
+                n: "part_id"
+                or: "partId"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/scriptures/insights/far"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "scriptures"
+            }
+            {
+              lit: "insights"
+            }
+            {
+              lit: "far"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /scriptures/insights/leans"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "corpus"
+                or: "corpus"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "exclude_bible"
+                or: "excludeBible"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 200
+                k: "query"
+                n: "min_length"
+                or: "minLength"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+            ]
+          }
+          m: "GET"
+          o: "/scriptures/insights/leans"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "scriptures"
+            }
+            {
+              lit: "insights"
+            }
+            {
+              lit: "leans"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /scriptures/insights/pairs"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "corpus"
+                or: "corpus"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "exclude_bible"
+                or: "excludeBible"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 200
+                k: "query"
+                n: "min_length"
+                or: "minLength"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+            ]
+          }
+          m: "GET"
+          o: "/scriptures/insights/pairs"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "scriptures"
+            }
+            {
+              lit: "insights"
+            }
+            {
+              lit: "pairs"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /scriptures/insights/shared-currents"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 200
+                k: "query"
+                n: "min_length"
+                or: "minLength"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                ex: "2"
+                k: "query"
+                n: "paper_id"
+                or: "paperId"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                k: "query"
+                n: "part_id"
+                or: "partId"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/scriptures/insights/shared-currents"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "scriptures"
+            }
+            {
+              lit: "insights"
+            }
+            {
+              lit: "shared-currents"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /scriptures/{corpus}/{ref}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "bhagavad-gita"
+                k: "param"
+                n: "corpus"
+                or: "corpus"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "2.47"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/scriptures/{corpus}/{ref}"
+          q: {
+            exist: [
+              "corpus"
+              "ref"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "scriptures"
+            }
+            {
+              var: "corpus"
+            }
+            {
+              var: "ref"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /scriptures/{corpus}/{ref}/urantia-parallels"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "bhagavad-gita"
+                k: "param"
+                n: "corpus"
+                or: "corpus"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "2.47"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/scriptures/{corpus}/{ref}/urantia-parallels"
+          q: {
+            exist: [
+              "corpus"
+              "ref"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "scriptures"
+            }
+            {
+              var: "corpus"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "urantia-parallels"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /scriptures/{corpus}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "bhagavad-gita"
+                k: "param"
+                n: "id"
+                or: "corpus"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/scriptures/{corpus}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              corpus: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "scriptures"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

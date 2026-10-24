@@ -1,0 +1,494 @@
+# Entity: search
+
+main: kit: entity: search: {
+
+  alias: field: {}
+
+  fields: {
+    audio: {
+      h: "Audio"
+      n: "audio"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$OBJECT`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    bibleParallels: {
+      h: "Bible Parallels"
+      n: "bibleParallels"
+      r: false
+      t: "`$ARRAY`"
+    }
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$ARRAY`"
+    }
+    entities: {
+      h: "Entities"
+      n: "entities"
+      r: false
+      t: "`$ARRAY`"
+    }
+    htmlText: {
+      h: "Html Text"
+      n: "htmlText"
+      r: true
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    include: {
+      h: "Include"
+      n: "include"
+      r: false
+      t: "`$STRING`"
+    }
+    labels: {
+      h: "Labels"
+      n: "labels"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$ARRAY`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    language: {
+      h: "Language"
+      n: "language"
+      r: false
+      t: "`$STRING`"
+    }
+    limit: {
+      h: "Limit"
+      n: "limit"
+      r: false
+      t: "`$INTEGER`"
+    }
+    match: {
+      h: "Match"
+      n: "match"
+      r: true
+      sh: "How the paragraph matched: reference (the query named it), exact (the whole phrase), all (every word), near (every word after a typo fix, see meta.didYouMean), most (two thirds of the words or more; with type `or`, some of the words)."
+      t: "`$STRING`"
+    }
+    meta: {
+      h: "Meta"
+      n: "meta"
+      r: true
+      t: "`$OBJECT`"
+    }
+    page: {
+      h: "Page"
+      n: "page"
+      r: false
+      t: "`$INTEGER`"
+    }
+    paperId: {
+      h: "Paper Id"
+      n: "paperId"
+      op: {
+        list: {
+          req: true
+          type: "`$STRING`"
+        }
+      }
+      r: false
+      t: "`$STRING`"
+    }
+    paperTitle: {
+      h: "Paper Title"
+      n: "paperTitle"
+      r: true
+      t: "`$STRING`"
+    }
+    paragraphId: {
+      h: "Paragraph Id"
+      n: "paragraphId"
+      r: true
+      t: "`$STRING`"
+    }
+    partId: {
+      h: "Part Id"
+      n: "partId"
+      op: {
+        list: {
+          req: true
+          type: "`$STRING`"
+        }
+      }
+      r: false
+      t: "`$STRING`"
+    }
+    q: {
+      h: "Q"
+      n: "q"
+      r: true
+      t: "`$STRING`"
+    }
+    rank: {
+      h: "Rank"
+      n: "rank"
+      r: true
+      t: "`$NUMBER`"
+    }
+    scriptureParallels: {
+      h: "Scripture Parallels"
+      n: "scriptureParallels"
+      r: false
+      t: "`$ARRAY`"
+    }
+    scriptureScores: {
+      h: "Scripture Scores"
+      n: "scriptureScores"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$OBJECT`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    sectionId: {
+      h: "Section Id"
+      n: "sectionId"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    sectionTitle: {
+      h: "Section Title"
+      n: "sectionTitle"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    sortId: {
+      h: "Sort Id"
+      n: "sortId"
+      r: true
+      t: "`$STRING`"
+    }
+    standardReferenceId: {
+      h: "Standard Reference Id"
+      n: "standardReferenceId"
+      r: true
+      t: "`$STRING`"
+    }
+    text: {
+      h: "Text"
+      n: "text"
+      r: true
+      t: "`$STRING`"
+    }
+    translation: {
+      h: "Translation"
+      n: "translation"
+      r: true
+      sh: "Present only when the text is a translation: a machine made it, and it is released as CC0."
+      t: "`$OBJECT`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: false
+      t: "`$STRING`"
+    }
+    urantiaParallels: {
+      h: "Urantia Parallels"
+      n: "urantiaParallels"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "search"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "include"
+            "limit"
+            "page"
+            "paperId"
+            "partId"
+            "q"
+            "type"
+          ]
+          co: {
+            id: "POST /search"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/search"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "search"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "include"
+            "limit"
+            "page"
+            "paperId"
+            "partId"
+            "q"
+          ]
+          co: {
+            id: "POST /search/semantic"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/search/semantic"
+          q: {
+            "$action": "semantic"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "search"
+            }
+            {
+              lit: "semantic"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /search"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "include"
+                or: "include"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                ex: "2"
+                k: "query"
+                n: "paper_id"
+                or: "paperId"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "part_id"
+                or: "partId"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "love"
+                k: "query"
+                n: "q"
+                or: "q"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "auto"
+                k: "query"
+                n: "type"
+                or: "type"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/search"
+          q: {
+            exist: [
+              "q"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "search"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /search/semantic"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "include"
+                or: "include"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                ex: "2"
+                k: "query"
+                n: "paper_id"
+                or: "paperId"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "part_id"
+                or: "partId"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "love"
+                k: "query"
+                n: "q"
+                or: "q"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/search/semantic"
+          q: {
+            "$action": "semantic"
+            exist: [
+              "q"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "search"
+            }
+            {
+              lit: "semantic"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,70 @@
+{
+  "existing": {
+    "paper": {
+      "PAPER00": {
+        "id": "PAPER00",
+        "labels": "s5b",
+        "paper": {},
+        "paragraphs": [],
+        "partId": "s5e",
+        "sortId": "s5f",
+        "title": "s60",
+        "topEntities": [],
+        "video": "s62"
+      },
+      "PAPER01": {
+        "id": "PAPER01",
+        "labels": "sb5",
+        "paper": {},
+        "paragraphs": [],
+        "partId": "sb8",
+        "sortId": "sb9",
+        "title": "sba",
+        "topEntities": [],
+        "video": "sbc"
+      },
+      "PAPER02": {
+        "id": "PAPER02",
+        "labels": "s10f",
+        "paper": {},
+        "paragraphs": [],
+        "partId": "s112",
+        "sortId": "s113",
+        "title": "s114",
+        "topEntities": [],
+        "video": "s116"
+      }
+    }
+  },
+  "new": {
+    "paper": {
+      "paper_ref01": {
+        "labels": "s169",
+        "paper": {},
+        "paragraphs": [],
+        "partId": "s16c",
+        "sortId": "s16d",
+        "title": "s16e",
+        "topEntities": [],
+        "video": "s170"
+      }
+    }
+  },
+  "requests": {
+    "GET /papers/{id}/sections": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /papers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /papers/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

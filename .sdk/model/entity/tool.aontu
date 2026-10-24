@@ -1,0 +1,77 @@
+# Entity: tool
+
+main: kit: entity: tool: {
+
+  alias: field: {}
+
+  name: "tool"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /tools/anthropic"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/tools/anthropic"
+          q: {
+            "$action": "anthropic"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "tools"
+            }
+            {
+              lit: "anthropic"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.tools`"
+          }
+        }
+        {
+          co: {
+            id: "GET /tools/openai"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/tools/openai"
+          q: {
+            "$action": "openai"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "tools"
+            }
+            {
+              lit: "openai"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.tools`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

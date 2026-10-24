@@ -1,0 +1,27 @@
+{
+  "existing": {
+    "quote": {
+      "QUOTE00": {
+        "id": "QUOTE00"
+      },
+      "QUOTE01": {
+        "id": "QUOTE01"
+      },
+      "QUOTE02": {
+        "id": "QUOTE02"
+      }
+    }
+  },
+  "new": {
+    "quote": {
+      "quote_ref01": {}
+    }
+  },
+  "requests": {
+    "POST /quotes/verify": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

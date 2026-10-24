@@ -1,0 +1,111 @@
+# Entity: feedback
+
+main: kit: entity: feedback: {
+
+  alias: field: {}
+
+  fields: {
+    category: {
+      h: "Category"
+      n: "category"
+      r: true
+      t: "`$STRING`"
+    }
+    client: {
+      h: "Client"
+      n: "client"
+      r: false
+      t: "`$STRING`"
+    }
+    contact: {
+      h: "Contact"
+      n: "contact"
+      r: false
+      t: "`$STRING`"
+    }
+    endpoint: {
+      h: "Endpoint"
+      n: "endpoint"
+      r: false
+      t: "`$STRING`"
+    }
+    message: {
+      h: "Message"
+      n: "message"
+      r: true
+      t: "`$STRING`"
+    }
+    pageUrl: {
+      fo: "uri"
+      h: "Page Url"
+      n: "pageUrl"
+      r: false
+      t: "`$STRING`"
+    }
+    ref: {
+      h: "Ref"
+      n: "ref"
+      r: false
+      t: "`$STRING`"
+    }
+    requestId: {
+      h: "Request Id"
+      n: "requestId"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "feedback"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "category"
+            "client"
+            "contact"
+            "endpoint"
+            "message"
+            "pageUrl"
+            "ref"
+            "requestId"
+          ]
+          co: {
+            id: "POST /feedback"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/feedback"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "feedback"
+            }
+          ]
+          t: {
+            req: {
+              category: "`reqdata.category`"
+              client: "`reqdata.client`"
+              contact: "`reqdata.contact`"
+              endpoint: "`reqdata.endpoint`"
+              message: "`reqdata.message`"
+              pageUrl: "`reqdata.page_url`"
+              ref: "`reqdata.ref`"
+              requestId: "`reqdata.request_id`"
+            }
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,56 @@
+# BasicScriptureFlow
+
+main: kit: flow: BasicScriptureFlow:
+{
+  entity: "scripture",
+  kind: "basic",
+  name: "BasicScriptureFlow",
+  step: [
+    {
+      i: {
+        ref: "scripture_ref01"
+      }
+
+      m: {
+        corpus: "corpus01"
+      }
+
+      o: "create"
+    }
+
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "scripture_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "scripture_ref01",
+        srcdatavar: "scripture_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "scripture01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-scripture_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicScriptureFlow"
+}

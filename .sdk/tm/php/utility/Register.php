@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+// UrantiaPapers SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+UrantiaPapersUtility::setRegistrar(function (UrantiaPapersUtility $u): void {
+    $u->clean = [UrantiaPapersClean::class, 'call'];
+    $u->clean_add = [UrantiaPapersClean::class, 'add'];
+    $u->clean_explain = [UrantiaPapersDone::class, 'clean_explain'];
+    $u->done = [UrantiaPapersDone::class, 'call'];
+    $u->make_error = [UrantiaPapersMakeError::class, 'call'];
+    $u->feature_add = [UrantiaPapersFeatureAdd::class, 'call'];
+    $u->feature_hook = [UrantiaPapersFeatureHook::class, 'call'];
+    $u->feature_init = [UrantiaPapersFeatureInit::class, 'call'];
+    $u->fetcher = [UrantiaPapersFetcher::class, 'call'];
+    $u->make_fetch_def = [UrantiaPapersMakeFetchDef::class, 'call'];
+    $u->make_context = [UrantiaPapersMakeContext::class, 'call'];
+    $u->make_options = [UrantiaPapersMakeOptions::class, 'call'];
+    $u->make_request = [UrantiaPapersMakeRequest::class, 'call'];
+    $u->make_response = [UrantiaPapersMakeResponse::class, 'call'];
+    $u->make_result = [UrantiaPapersMakeResult::class, 'call'];
+    $u->make_point = [UrantiaPapersMakePoint::class, 'call'];
+    $u->make_spec = [UrantiaPapersMakeSpec::class, 'call'];
+    $u->make_url = [UrantiaPapersMakeUrl::class, 'call'];
+    $u->param = [UrantiaPapersParam::class, 'call'];
+    $u->prepare_auth = [UrantiaPapersPrepareAuth::class, 'call'];
+    $u->prepare_body = [UrantiaPapersPrepareBody::class, 'call'];
+    $u->prepare_headers = [UrantiaPapersPrepareHeaders::class, 'call'];
+    $u->prepare_method = [UrantiaPapersPrepareMethod::class, 'call'];
+    $u->prepare_params = [UrantiaPapersPrepareParams::class, 'call'];
+    $u->prepare_path = [UrantiaPapersPreparePath::class, 'call'];
+    $u->prepare_query = [UrantiaPapersPrepareQuery::class, 'call'];
+    $u->graphql_body = [UrantiaPapersGraphql::class, 'body'];
+    $u->graphql_errors = [UrantiaPapersGraphql::class, 'errors'];
+    $u->result_basic = [UrantiaPapersResultBasic::class, 'call'];
+    $u->result_body = [UrantiaPapersResultBody::class, 'call'];
+    $u->result_headers = [UrantiaPapersResultHeaders::class, 'call'];
+    $u->transform_request = [UrantiaPapersTransformRequest::class, 'call'];
+    $u->transform_response = [UrantiaPapersTransformResponse::class, 'call'];
+});

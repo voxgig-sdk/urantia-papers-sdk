@@ -1,0 +1,28 @@
+# BasicTableOfContentFlow
+
+main: kit: flow: BasicTableOfContentFlow:
+{
+  entity: "table_of_content",
+  kind: "basic",
+  name: "BasicTableOfContentFlow",
+  step: [
+    {
+      i: {
+        ref: "table_of_content_ref01",
+        srcdatavar: "table_of_content_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-table_of_content_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTableOfContentFlow"
+}

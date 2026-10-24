@@ -1,0 +1,144 @@
+{
+  "existing": {
+    "bible": {
+      "BIBLE00": {
+        "abbr": "se6",
+        "bookCode": "se7",
+        "bookName": "se8",
+        "bookOrder": 233,
+        "canon": "sea",
+        "chapter": 235,
+        "chapterCount": 236,
+        "chunk": {},
+        "data": [],
+        "fullName": "sef",
+        "id": "BIBLE00",
+        "limit": 241,
+        "meta": {},
+        "page": 243,
+        "q": "sf4",
+        "reference": "sf5",
+        "text": "sf6",
+        "translation": "sf7",
+        "urantiaParallelLimit": 248,
+        "urantiaParallels": [],
+        "verse": 250,
+        "verseCount": 251,
+        "verses": [],
+        "book_code": "BOOK_CODE01"
+      },
+      "BIBLE01": {
+        "abbr": "s1cc",
+        "bookCode": "s1cd",
+        "bookName": "s1ce",
+        "bookOrder": 463,
+        "canon": "s1d0",
+        "chapter": 465,
+        "chapterCount": 466,
+        "chunk": {},
+        "data": [],
+        "fullName": "s1d5",
+        "id": "BIBLE01",
+        "limit": 471,
+        "meta": {},
+        "page": 473,
+        "q": "s1da",
+        "reference": "s1db",
+        "text": "s1dc",
+        "translation": "s1dd",
+        "urantiaParallelLimit": 478,
+        "urantiaParallels": [],
+        "verse": 480,
+        "verseCount": 481,
+        "verses": [],
+        "book_code": "BOOK_CODE01"
+      },
+      "BIBLE02": {
+        "abbr": "s2b2",
+        "bookCode": "s2b3",
+        "bookName": "s2b4",
+        "bookOrder": 693,
+        "canon": "s2b6",
+        "chapter": 695,
+        "chapterCount": 696,
+        "chunk": {},
+        "data": [],
+        "fullName": "s2bb",
+        "id": "BIBLE02",
+        "limit": 701,
+        "meta": {},
+        "page": 703,
+        "q": "s2c0",
+        "reference": "s2c1",
+        "text": "s2c2",
+        "translation": "s2c3",
+        "urantiaParallelLimit": 708,
+        "urantiaParallels": [],
+        "verse": 710,
+        "verseCount": 711,
+        "verses": [],
+        "book_code": "BOOK_CODE01"
+      }
+    }
+  },
+  "new": {
+    "bible": {
+      "bible_ref01": {
+        "abbr": "s398",
+        "bookCode": "s399",
+        "bookName": "s39a",
+        "bookOrder": 923,
+        "canon": "s39c",
+        "chapter": 925,
+        "chapterCount": 926,
+        "chunk": {},
+        "data": [],
+        "fullName": "s3a1",
+        "limit": 931,
+        "meta": {},
+        "page": 933,
+        "q": "s3a6",
+        "reference": "s3a7",
+        "text": "s3a8",
+        "translation": "s3a9",
+        "urantiaParallelLimit": 938,
+        "urantiaParallels": [],
+        "verse": 940,
+        "verseCount": 941,
+        "verses": []
+      }
+    }
+  },
+  "requests": {
+    "POST /bible/search/semantic": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /bible/books": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /bible/{bookCode}/{chapter}/{verse}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /bible/{bookCode}/{chapter}/{verse}/urantia-parallels": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /bible/{bookCode}/{chapter}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /bible/{bookCode}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

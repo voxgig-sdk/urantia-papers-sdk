@@ -1,0 +1,41 @@
+{
+  "existing": {
+    "language": {
+      "LANGUAGE00": {
+        "code": "s28",
+        "entityCount": 41,
+        "name": "s2a",
+        "paragraphCount": 43
+      },
+      "LANGUAGE01": {
+        "code": "s50",
+        "entityCount": 81,
+        "name": "s52",
+        "paragraphCount": 83
+      },
+      "LANGUAGE02": {
+        "code": "s78",
+        "entityCount": 121,
+        "name": "s7a",
+        "paragraphCount": 123
+      }
+    }
+  },
+  "new": {
+    "language": {
+      "language_ref01": {
+        "code": "sa0",
+        "entityCount": 161,
+        "name": "sa2",
+        "paragraphCount": 163
+      }
+    }
+  },
+  "requests": {
+    "GET /languages": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

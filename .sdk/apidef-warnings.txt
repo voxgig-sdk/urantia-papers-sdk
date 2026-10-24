@@ -1,0 +1,40 @@
+{
+  point: "warning"
+  note: "Points GET /bible/{bookCode}/{chapter}/{verse} and GET /bible/{bookCode}/{chapter}/{verse}/urantia-parallels on entity=bible op=load have the same selector (exist: book_code,chapter,verse), so only GET /bible/{bookCode}/{chapter}/{verse} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "bible"
+  op: "load"
+  points: [
+    "GET /bible/{bookCode}/{chapter}/{verse}"
+    "GET /bible/{bookCode}/{chapter}/{verse}/urantia-parallels"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /scriptures, GET /scriptures/insights/far, GET /scriptures/insights/leans, GET /scriptures/insights/pairs and GET /scriptures/insights/shared-currents on entity=scripture op=list have the same selector (exist: none), so only GET /scriptures is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "scripture"
+  op: "list"
+  points: [
+    "GET /scriptures"
+    "GET /scriptures/insights/far"
+    "GET /scriptures/insights/leans"
+    "GET /scriptures/insights/pairs"
+    "GET /scriptures/insights/shared-currents"
+  ]
+
+}
+
+
+{
+  point: "warning"
+  note: "Points GET /scriptures/{corpus}/{ref} and GET /scriptures/{corpus}/{ref}/urantia-parallels on entity=scripture op=load have the same selector (exist: corpus,ref), so only GET /scriptures/{corpus}/{ref} is ever chosen. An action or another entity in guide.aontu tells them apart."
+  entity: "scripture"
+  op: "load"
+  points: [
+    "GET /scriptures/{corpus}/{ref}"
+    "GET /scriptures/{corpus}/{ref}/urantia-parallels"
+  ]
+
+}

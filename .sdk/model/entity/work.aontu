@@ -1,0 +1,690 @@
+# Entity: work
+
+main: kit: entity: work: {
+
+  alias: field: {}
+
+  fields: {
+    data: {
+      h: "Data"
+      n: "data"
+      r: true
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "The work id: \"bible\", or the slug of a text such as \"dhammapada\"."
+      t: "`$STRING`"
+    }
+    kind: {
+      h: "Kind"
+      n: "kind"
+      r: true
+      sh: "\"scripture\": read as sacred by its tradition."
+      t: "`$STRING`"
+    }
+    limit: {
+      h: "Limit"
+      n: "limit"
+      r: false
+      t: "`$INTEGER`"
+    }
+    match: {
+      h: "Match"
+      n: "match"
+      r: false
+      sh: "Keyword search: how it matched."
+      t: "`$STRING`"
+    }
+    meta: {
+      h: "Meta"
+      n: "meta"
+      r: true
+      t: "`$OBJECT`"
+    }
+    page: {
+      h: "Page"
+      n: "page"
+      r: false
+      t: "`$INTEGER`"
+    }
+    q: {
+      h: "Q"
+      n: "q"
+      r: true
+      t: "`$STRING`"
+    }
+    refPrefix: {
+      h: "Ref Prefix"
+      n: "refPrefix"
+      r: true
+      sh: "The prefix of its references, such as \"Dhp\"."
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    reference: {
+      h: "Reference"
+      n: "reference"
+      r: true
+      sh: "\"John 3:16\", \"Dhp 183\", \"BG 2.47-49\" (a chunk in semantic search)."
+      t: "`$STRING`"
+    }
+    religion: {
+      h: "Religion"
+      n: "religion"
+      r: true
+      sh: "The same as `tradition`, kept for older clients."
+      t: "`$STRING`"
+    }
+    similarity: {
+      h: "Similarity"
+      n: "similarity"
+      r: false
+      sh: "Semantic search: cosine similarity."
+      t: "`$NUMBER`"
+    }
+    strength: {
+      h: "Strength"
+      n: "strength"
+      r: false
+      sh: "How close the result is: strong (most right answers score this), related, or weak (likely off the topic)."
+      t: "`$STRING`"
+    }
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      sh: "One plain sentence on what the work is."
+      t: "`$STRING`"
+    }
+    text: {
+      h: "Text"
+      n: "text"
+      r: true
+      t: "`$STRING`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: true
+      t: "`$STRING`"
+    }
+    tradition: {
+      h: "Tradition"
+      n: "tradition"
+      r: true
+      sh: "The people or the religion of the work: \"Buddhist\", \"Norse\", \"Ancient Greek\"."
+      t: "`$STRING`"
+    }
+    translator: {
+      h: "Translator"
+      n: "translator"
+      r: true
+      t: "`$STRING`"
+    }
+    unitLabel: {
+      h: "Unit Label"
+      n: "unitLabel"
+      r: true
+      sh: "The word for one unit of the work: \"verse\", \"section\", \"pauri\"."
+      t: "`$STRING`"
+    }
+    units: {
+      h: "Units"
+      n: "units"
+      r: true
+      t: "`$INTEGER`"
+    }
+    urantiaParallelLimit: {
+      h: "Urantia Parallel Limit"
+      n: "urantiaParallelLimit"
+      r: false
+      t: "`$INTEGER`"
+    }
+    urantiaParallels: {
+      h: "Urantia Parallels"
+      n: "urantiaParallels"
+      r: true
+      sh: "The nearest Urantia paragraphs (semantic parallels, not curated ones)."
+      t: "`$ARRAY`"
+    }
+    urantiaSection: {
+      h: "Urantia Section"
+      n: "urantiaSection"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    url: {
+      h: "Url"
+      n: "url"
+      r: true
+      sh: "The public page that holds the text, or null."
+      t: [
+        "`$ONE`"
+        [
+          "`$STRING`"
+          "`$NULL`"
+        ]
+      ]
+    }
+    work: {
+      h: "Work"
+      n: "work"
+      op: {
+        list: {
+          req: true
+          type: "`$OBJECT`"
+        }
+      }
+      r: false
+      sh: "One work only: \"bible\" or a work id such as \"dhammapada\"."
+      t: "`$STRING`"
+    }
+    year: {
+      h: "Year"
+      n: "year"
+      r: true
+      t: [
+        "`$ONE`"
+        [
+          "`$INTEGER`"
+          "`$NULL`"
+        ]
+      ]
+    }
+  }
+
+  id: {
+    field: "id"
+    from: {
+      work: "work.id"
+    }
+    name: "id"
+    parts: [
+      "work"
+      "ref"
+    ]
+    sep: "/"
+  }
+
+  name: "work"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "limit"
+            "page"
+            "q"
+            "urantiaParallelLimit"
+            "work"
+          ]
+          co: {
+            id: "POST /works/search"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/works/search"
+          q: {
+            "$action": "search"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "works"
+            }
+            {
+              lit: "search"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          bf: [
+            "limit"
+            "page"
+            "q"
+            "urantiaParallelLimit"
+            "work"
+          ]
+          co: {
+            id: "POST /works/search/semantic"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/works/search/semantic"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "works"
+            }
+            {
+              lit: "search"
+            }
+            {
+              lit: "semantic"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /works/search"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                ex: "love"
+                k: "query"
+                n: "q"
+                or: "q"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: 3
+                k: "query"
+                n: "urantia_parallel_limit"
+                or: "urantiaParallelLimit"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                k: "query"
+                n: "work"
+                or: "work"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/works/search"
+          q: {
+            "$action": "search"
+            exist: [
+              "q"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "works"
+            }
+            {
+              lit: "search"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /works/search/semantic"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "page"
+                or: "page"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                ex: "love"
+                k: "query"
+                n: "q"
+                or: "q"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: 3
+                k: "query"
+                n: "urantia_parallel_limit"
+                or: "urantiaParallelLimit"
+                r: false
+                t: [
+                  "`$ONE`"
+                  [
+                    "`$INTEGER`"
+                    "`$NULL`"
+                  ]
+                ]
+              }
+              {
+                k: "query"
+                n: "work"
+                or: "work"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/works/search/semantic"
+          q: {
+            exist: [
+              "q"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "works"
+            }
+            {
+              lit: "search"
+            }
+            {
+              lit: "semantic"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /works"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/works"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "works"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /works/{work}/{ref}/urantia-parallels"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "bhagavad-gita"
+                k: "param"
+                n: "id"
+                or: "work"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "2.47"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/works/{work}/{ref}/urantia-parallels"
+          q: {
+            "$action": "urantia_parallel"
+            exist: [
+              "id"
+              "ref"
+            ]
+          }
+          r: {
+            param: {
+              work: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "works"
+            }
+            {
+              var: "id"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "urantia-parallels"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /works/{work}/{ref}/work-parallels"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "bhagavad-gita"
+                k: "param"
+                n: "id"
+                or: "work"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "2.47"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/works/{work}/{ref}/work-parallels"
+          q: {
+            "$action": "work_parallel"
+            exist: [
+              "id"
+              "ref"
+            ]
+          }
+          r: {
+            param: {
+              work: "id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "works"
+            }
+            {
+              var: "id"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "work-parallels"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+        {
+          co: {
+            id: "GET /works/{work}/{ref}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "2.47"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "bhagavad-gita"
+                k: "param"
+                n: "work"
+                or: "work"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/works/{work}/{ref}"
+          q: {
+            exist: [
+              "ref"
+              "work"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "works"
+            }
+            {
+              var: "work"
+            }
+            {
+              var: "ref"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

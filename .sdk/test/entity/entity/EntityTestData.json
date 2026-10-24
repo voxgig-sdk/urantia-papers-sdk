@@ -1,0 +1,70 @@
+{
+  "existing": {
+    "entity": {
+      "ENTITY00": {
+        "aliases": "s5a",
+        "citationCount": 91,
+        "description": "s5c",
+        "id": "ENTITY00",
+        "language": "s5e",
+        "name": "s5f",
+        "seeAlso": "s60",
+        "sense": "s61",
+        "type": "s62"
+      },
+      "ENTITY01": {
+        "aliases": "sb4",
+        "citationCount": 181,
+        "description": "sb6",
+        "id": "ENTITY01",
+        "language": "sb8",
+        "name": "sb9",
+        "seeAlso": "sba",
+        "sense": "sbb",
+        "type": "sbc"
+      },
+      "ENTITY02": {
+        "aliases": "s10e",
+        "citationCount": 271,
+        "description": "s110",
+        "id": "ENTITY02",
+        "language": "s112",
+        "name": "s113",
+        "seeAlso": "s114",
+        "sense": "s115",
+        "type": "s116"
+      }
+    }
+  },
+  "new": {
+    "entity": {
+      "entity_ref01": {
+        "aliases": "s168",
+        "citationCount": 361,
+        "description": "s16a",
+        "language": "s16c",
+        "name": "s16d",
+        "seeAlso": "s16e",
+        "sense": "s16f",
+        "type": "s170"
+      }
+    }
+  },
+  "requests": {
+    "GET /entities/{id}/paragraphs": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /entities": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /entities/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

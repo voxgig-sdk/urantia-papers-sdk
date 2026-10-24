@@ -1,0 +1,60 @@
+{
+  "existing": {
+    "feedback": {
+      "FEEDBACK00": {
+        "category": "s50",
+        "client": "s51",
+        "contact": "s52",
+        "endpoint": "s53",
+        "message": "s54",
+        "pageUrl": "s55",
+        "ref": "s56",
+        "requestId": "s57",
+        "id": "FEEDBACK00"
+      },
+      "FEEDBACK01": {
+        "category": "sa0",
+        "client": "sa1",
+        "contact": "sa2",
+        "endpoint": "sa3",
+        "message": "sa4",
+        "pageUrl": "sa5",
+        "ref": "sa6",
+        "requestId": "sa7",
+        "id": "FEEDBACK01"
+      },
+      "FEEDBACK02": {
+        "category": "sf0",
+        "client": "sf1",
+        "contact": "sf2",
+        "endpoint": "sf3",
+        "message": "sf4",
+        "pageUrl": "sf5",
+        "ref": "sf6",
+        "requestId": "sf7",
+        "id": "FEEDBACK02"
+      }
+    }
+  },
+  "new": {
+    "feedback": {
+      "feedback_ref01": {
+        "category": "s140",
+        "client": "s141",
+        "contact": "s142",
+        "endpoint": "s143",
+        "message": "s144",
+        "pageUrl": "s145",
+        "ref": "s146",
+        "requestId": "s147"
+      }
+    }
+  },
+  "requests": {
+    "POST /feedback": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+# Entity: quote
+
+main: kit: entity: quote: {
+
+  alias: field: {}
+
+  name: "quote"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          bf: [
+            "ref"
+            "text"
+          ]
+          co: {
+            id: "POST /quotes/verify"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/quotes/verify"
+          q: {
+            "$action": "verify"
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "quotes"
+            }
+            {
+              lit: "verify"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

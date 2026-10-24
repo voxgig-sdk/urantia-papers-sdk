@@ -1,0 +1,61 @@
+# Entity: table_of_content
+
+main: kit: entity: table_of_content: {
+
+  alias: field: {}
+
+  fields: {
+    parts: {
+      h: "Parts"
+      n: "parts"
+      r: true
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "table_of_content"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /toc"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "eng"
+                k: "query"
+                n: "lang"
+                or: "lang"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/toc"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "toc"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

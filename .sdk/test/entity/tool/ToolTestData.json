@@ -1,0 +1,26 @@
+{
+  "existing": {
+    "tool": {
+      "TOOL00": {},
+      "TOOL01": {},
+      "TOOL02": {}
+    }
+  },
+  "new": {
+    "tool": {
+      "tool_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /tools/anthropic": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /tools/openai": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

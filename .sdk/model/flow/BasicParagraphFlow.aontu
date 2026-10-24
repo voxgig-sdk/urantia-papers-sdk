@@ -1,0 +1,28 @@
+# BasicParagraphFlow
+
+main: kit: flow: BasicParagraphFlow:
+{
+  entity: "paragraph",
+  kind: "basic",
+  name: "BasicParagraphFlow",
+  step: [
+    {
+      i: {
+        ref: "paragraph_ref01",
+        srcdatavar: "paragraph_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-paragraph_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicParagraphFlow"
+}

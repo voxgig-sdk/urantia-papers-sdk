@@ -1,0 +1,166 @@
+{
+  "existing": {
+    "work": {
+      "WORK00": {
+        "data": [],
+        "id": "WORK00",
+        "kind": "s106",
+        "limit": 263,
+        "match": "s108",
+        "meta": {},
+        "page": 266,
+        "q": "s10b",
+        "refPrefix": "s10c",
+        "reference": "s10d",
+        "religion": "s10e",
+        "similarity": 271,
+        "strength": "s110",
+        "summary": "s111",
+        "text": "s112",
+        "title": "s113",
+        "tradition": "s114",
+        "translator": "s115",
+        "unitLabel": "s116",
+        "units": 279,
+        "urantiaParallelLimit": 280,
+        "urantiaParallels": [],
+        "urantiaSection": "s11a",
+        "url": "s11b",
+        "work": "s11c",
+        "year": "s11d",
+        "ref": "REF01"
+      },
+      "WORK01": {
+        "data": [],
+        "id": "WORK01",
+        "kind": "s20a",
+        "limit": 523,
+        "match": "s20c",
+        "meta": {},
+        "page": 526,
+        "q": "s20f",
+        "refPrefix": "s210",
+        "reference": "s211",
+        "religion": "s212",
+        "similarity": 531,
+        "strength": "s214",
+        "summary": "s215",
+        "text": "s216",
+        "title": "s217",
+        "tradition": "s218",
+        "translator": "s219",
+        "unitLabel": "s21a",
+        "units": 539,
+        "urantiaParallelLimit": 540,
+        "urantiaParallels": [],
+        "urantiaSection": "s21e",
+        "url": "s21f",
+        "work": "s220",
+        "year": "s221",
+        "ref": "REF01"
+      },
+      "WORK02": {
+        "data": [],
+        "id": "WORK02",
+        "kind": "s30e",
+        "limit": 783,
+        "match": "s310",
+        "meta": {},
+        "page": 786,
+        "q": "s313",
+        "refPrefix": "s314",
+        "reference": "s315",
+        "religion": "s316",
+        "similarity": 791,
+        "strength": "s318",
+        "summary": "s319",
+        "text": "s31a",
+        "title": "s31b",
+        "tradition": "s31c",
+        "translator": "s31d",
+        "unitLabel": "s31e",
+        "units": 799,
+        "urantiaParallelLimit": 800,
+        "urantiaParallels": [],
+        "urantiaSection": "s322",
+        "url": "s323",
+        "work": "s324",
+        "year": "s325",
+        "ref": "REF01"
+      }
+    }
+  },
+  "new": {
+    "work": {
+      "work_ref01": {
+        "data": [],
+        "kind": "s412",
+        "limit": 1043,
+        "match": "s414",
+        "meta": {},
+        "page": 1046,
+        "q": "s417",
+        "refPrefix": "s418",
+        "reference": "s419",
+        "religion": "s41a",
+        "similarity": 1051,
+        "strength": "s41c",
+        "summary": "s41d",
+        "text": "s41e",
+        "title": "s41f",
+        "tradition": "s420",
+        "translator": "s421",
+        "unitLabel": "s422",
+        "units": 1059,
+        "urantiaParallelLimit": 1060,
+        "urantiaParallels": [],
+        "urantiaSection": "s426",
+        "url": "s427",
+        "work": "s428",
+        "year": "s429"
+      }
+    }
+  },
+  "requests": {
+    "POST /works/search": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /works/search/semantic": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /works/search": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /works/search/semantic": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /works": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /works/{work}/{ref}/urantia-parallels": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /works/{work}/{ref}/work-parallels": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /works/{work}/{ref}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

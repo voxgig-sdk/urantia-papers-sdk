@@ -1,0 +1,6374 @@
+{
+  "def": "urantia-papers_0.1.0.json",
+  "main": {
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "",
+        "url": ""
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "audio": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "audio": {
+              "a": true,
+              "h": "Audio",
+              "n": "audio",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$OBJECT`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "audio",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /audio/{ref}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "2:5.1",
+                        "k": "param",
+                        "n": "id",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/audio/{ref}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "ref": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "audio"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "bible": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "abbr": {
+              "a": true,
+              "h": "Abbr",
+              "n": "abbr",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "bookCode": {
+              "a": true,
+              "h": "Book Code",
+              "n": "bookCode",
+              "op": {
+                "create": {
+                  "req": false,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "bookName": {
+              "a": true,
+              "h": "Book Name",
+              "n": "bookName",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "bookOrder": {
+              "a": true,
+              "h": "Book Order",
+              "n": "bookOrder",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "canon": {
+              "a": true,
+              "h": "Canon",
+              "n": "canon",
+              "op": {
+                "create": {
+                  "req": false,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "chapter": {
+              "a": true,
+              "h": "Chapter",
+              "n": "chapter",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "chapterCount": {
+              "a": true,
+              "h": "Chapter Count",
+              "n": "chapterCount",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "chunk": {
+              "a": true,
+              "h": "Chunk",
+              "n": "chunk",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "data": {
+              "a": true,
+              "h": "Data",
+              "n": "data",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "fullName": {
+              "a": true,
+              "h": "Full Name",
+              "n": "fullName",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "limit": {
+              "a": true,
+              "h": "Limit",
+              "n": "limit",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "meta": {
+              "a": true,
+              "h": "Meta",
+              "n": "meta",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "page": {
+              "a": true,
+              "h": "Page",
+              "n": "page",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "q": {
+              "a": true,
+              "h": "Q",
+              "n": "q",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "reference": {
+              "a": true,
+              "h": "Reference",
+              "n": "reference",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "text": {
+              "a": true,
+              "h": "Text",
+              "n": "text",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "translation": {
+              "a": true,
+              "h": "Translation",
+              "n": "translation",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "urantiaParallelLimit": {
+              "a": true,
+              "h": "Urantia Parallel Limit",
+              "n": "urantiaParallelLimit",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "urantiaParallels": {
+              "a": true,
+              "h": "Urantia Parallels",
+              "n": "urantiaParallels",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "verse": {
+              "a": true,
+              "h": "Verse",
+              "n": "verse",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "verseCount": {
+              "a": true,
+              "h": "Verse Count",
+              "n": "verseCount",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "verses": {
+              "a": true,
+              "h": "Verses",
+              "n": "verses",
+              "r": true,
+              "t": "`$ARRAY`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "bible",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "bf": [
+                    "bookCode",
+                    "canon",
+                    "limit",
+                    "page",
+                    "q",
+                    "urantiaParallelLimit"
+                  ],
+                  "co": {
+                    "id": "POST /bible/search/semantic",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/bible/search/semantic",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "bible"
+                    },
+                    {
+                      "lit": "search"
+                    },
+                    {
+                      "lit": "semantic"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /bible/books",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/bible/books",
+                  "q": {
+                    "$action": "book"
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "bible"
+                    },
+                    {
+                      "lit": "books"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /bible/{bookCode}/{chapter}/{verse}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "MAT",
+                        "k": "param",
+                        "n": "book_code",
+                        "or": "bookCode",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 5,
+                        "k": "param",
+                        "n": "chapter",
+                        "or": "chapter",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 3,
+                        "k": "param",
+                        "n": "verse",
+                        "or": "verse",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/bible/{bookCode}/{chapter}/{verse}",
+                  "q": {
+                    "exist": [
+                      "book_code",
+                      "chapter",
+                      "verse"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "bookCode": "book_code"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "bible"
+                    },
+                    {
+                      "var": "book_code"
+                    },
+                    {
+                      "var": "chapter"
+                    },
+                    {
+                      "var": "verse"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /bible/{bookCode}/{chapter}/{verse}/urantia-parallels",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "MAT",
+                        "k": "param",
+                        "n": "book_code",
+                        "or": "bookCode",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 5,
+                        "k": "param",
+                        "n": "chapter",
+                        "or": "chapter",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 3,
+                        "k": "param",
+                        "n": "verse",
+                        "or": "verse",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/bible/{bookCode}/{chapter}/{verse}/urantia-parallels",
+                  "q": {
+                    "exist": [
+                      "book_code",
+                      "chapter",
+                      "verse"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "bookCode": "book_code"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "bible"
+                    },
+                    {
+                      "var": "book_code"
+                    },
+                    {
+                      "var": "chapter"
+                    },
+                    {
+                      "var": "verse"
+                    },
+                    {
+                      "lit": "urantia-parallels"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /bible/{bookCode}/{chapter}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "MAT",
+                        "k": "param",
+                        "n": "book_code",
+                        "or": "bookCode",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 5,
+                        "k": "param",
+                        "n": "chapter",
+                        "or": "chapter",
+                        "r": true,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/bible/{bookCode}/{chapter}",
+                  "q": {
+                    "exist": [
+                      "book_code",
+                      "chapter"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "bookCode": "book_code"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "bible"
+                    },
+                    {
+                      "var": "book_code"
+                    },
+                    {
+                      "var": "chapter"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /bible/{bookCode}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "MAT",
+                        "k": "param",
+                        "n": "id",
+                        "or": "bookCode",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/bible/{bookCode}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "bookCode": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "bible"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "citation": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "citation": {
+              "a": true,
+              "h": "Citation",
+              "n": "citation",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "ref": {
+              "a": true,
+              "h": "Ref",
+              "n": "ref",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "style": {
+              "a": true,
+              "h": "Style",
+              "n": "style",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "citation",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /cite",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "2:5.1",
+                        "k": "query",
+                        "n": "ref",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "apa",
+                        "k": "query",
+                        "n": "style",
+                        "or": "style",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/cite",
+                  "q": {
+                    "exist": [
+                      "ref"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "cite"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "embedding": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "dimensions": {
+              "a": true,
+              "h": "Dimensions",
+              "n": "dimensions",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "embedding": {
+              "a": true,
+              "h": "Embedding",
+              "n": "embedding",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "model": {
+              "a": true,
+              "h": "Model",
+              "n": "model",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "standardReferenceId": {
+              "a": true,
+              "h": "Standard Reference Id",
+              "n": "standardReferenceId",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "embedding",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /embeddings/{ref}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "2:5.1",
+                        "k": "param",
+                        "n": "id",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "large",
+                        "k": "query",
+                        "n": "model",
+                        "or": "model",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/embeddings/{ref}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "ref": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "embeddings"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /embeddings/export",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "jsonl",
+                        "k": "query",
+                        "n": "format",
+                        "or": "format",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "large",
+                        "k": "query",
+                        "n": "model",
+                        "or": "model",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "2",
+                        "k": "query",
+                        "n": "paper_id",
+                        "or": "paperId",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/embeddings/export",
+                  "q": {
+                    "$action": "export",
+                    "exist": [
+                      "paper_id"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "embeddings"
+                    },
+                    {
+                      "lit": "export"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "entity": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "aliases": {
+              "a": true,
+              "h": "Aliases",
+              "n": "aliases",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$ARRAY`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "citationCount": {
+              "a": true,
+              "h": "Citation Count",
+              "n": "citationCount",
+              "r": true,
+              "sh": "Number of citations in the source index.",
+              "t": "`$INTEGER`"
+            },
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "language": {
+              "a": true,
+              "h": "Language",
+              "n": "language",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "seeAlso": {
+              "a": true,
+              "h": "See Also",
+              "n": "seeAlso",
+              "r": true,
+              "sh": "Related entry names.",
+              "t": [
+                "`$ONE`",
+                [
+                  "`$ARRAY`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "sense": {
+              "a": true,
+              "h": "Sense",
+              "n": "sense",
+              "r": true,
+              "sh": "For a concept with a lowercase name: \"special\" when the papers coin the word or use it in their own sense, \"ordinary\" when they use it in its everyday sense.",
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "type": {
+              "a": true,
+              "h": "Type",
+              "n": "type",
+              "r": true,
+              "t": "`$STRING`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "entity",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /entities/{id}/paragraphs",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "michael-of-nebadon",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "eng",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/entities/{id}/paragraphs",
+                  "q": {
+                    "$action": "paragraph",
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "entities"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "lit": "paragraphs"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /entities",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "eng",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "q",
+                        "or": "q",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "type",
+                        "or": "type",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/entities",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "entities"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /entities/{id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "michael-of-nebadon",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/entities/{id}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "entities"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "feedback": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "category": {
+              "a": true,
+              "h": "Category",
+              "n": "category",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "client": {
+              "a": true,
+              "h": "Client",
+              "n": "client",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "contact": {
+              "a": true,
+              "h": "Contact",
+              "n": "contact",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "endpoint": {
+              "a": true,
+              "h": "Endpoint",
+              "n": "endpoint",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "message": {
+              "a": true,
+              "h": "Message",
+              "n": "message",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "pageUrl": {
+              "a": true,
+              "fo": "uri",
+              "h": "Page Url",
+              "n": "pageUrl",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "ref": {
+              "a": true,
+              "h": "Ref",
+              "n": "ref",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "requestId": {
+              "a": true,
+              "h": "Request Id",
+              "n": "requestId",
+              "r": false,
+              "t": "`$STRING`"
+            }
+          },
+          "name": "feedback",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "bf": [
+                    "category",
+                    "client",
+                    "contact",
+                    "endpoint",
+                    "message",
+                    "pageUrl",
+                    "ref",
+                    "requestId"
+                  ],
+                  "co": {
+                    "id": "POST /feedback",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/feedback",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "feedback"
+                    }
+                  ],
+                  "t": {
+                    "req": {
+                      "category": "`reqdata.category`",
+                      "client": "`reqdata.client`",
+                      "contact": "`reqdata.contact`",
+                      "endpoint": "`reqdata.endpoint`",
+                      "message": "`reqdata.message`",
+                      "pageUrl": "`reqdata.page_url`",
+                      "ref": "`reqdata.ref`",
+                      "requestId": "`reqdata.request_id`"
+                    },
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "language": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "code": {
+              "a": true,
+              "h": "Code",
+              "n": "code",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "entityCount": {
+              "a": true,
+              "h": "Entity Count",
+              "n": "entityCount",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "name": {
+              "a": true,
+              "h": "Name",
+              "n": "name",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "paragraphCount": {
+              "a": true,
+              "h": "Paragraph Count",
+              "n": "paragraphCount",
+              "r": true,
+              "t": "`$INTEGER`"
+            }
+          },
+          "name": "language",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /languages",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/languages",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "languages"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "ogn": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "ogn",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /og/{ref}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "2:5.1",
+                        "k": "param",
+                        "n": "ref",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "default",
+                        "k": "query",
+                        "n": "theme",
+                        "or": "theme",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/og/{ref}",
+                  "q": {
+                    "exist": [
+                      "ref"
+                    ]
+                  },
+                  "r": {},
+                  "s": [
+                    {
+                      "lit": "og"
+                    },
+                    {
+                      "var": "ref"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "paper": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "labels": {
+              "a": true,
+              "h": "Labels",
+              "n": "labels",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$ARRAY`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "paper": {
+              "a": true,
+              "h": "Paper",
+              "n": "paper",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "paragraphs": {
+              "a": true,
+              "h": "Paragraphs",
+              "n": "paragraphs",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "partId": {
+              "a": true,
+              "h": "Part Id",
+              "n": "partId",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sortId": {
+              "a": true,
+              "h": "Sort Id",
+              "n": "sortId",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "topEntities": {
+              "a": true,
+              "h": "Top Entities",
+              "n": "topEntities",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "video": {
+              "a": true,
+              "h": "Video",
+              "n": "video",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$OBJECT`",
+                  "`$NULL`"
+                ]
+              ]
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "paper",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /papers/{id}/sections",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "1",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "eng",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/papers/{id}/sections",
+                  "q": {
+                    "$action": "section",
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "papers"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "lit": "sections"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /papers",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "default",
+                        "k": "query",
+                        "n": "format",
+                        "or": "format",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "include",
+                        "or": "include",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "eng",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/papers",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "papers"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /papers/{id}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "1",
+                        "k": "param",
+                        "n": "id",
+                        "or": "id",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "default",
+                        "k": "query",
+                        "n": "format",
+                        "or": "format",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "include",
+                        "or": "include",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "eng",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/papers/{id}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "papers"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "paragraph": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "data": {
+              "a": true,
+              "h": "Data",
+              "n": "data",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "navigation": {
+              "a": true,
+              "h": "Navigation",
+              "n": "navigation",
+              "r": true,
+              "t": "`$OBJECT`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "paragraph",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /paragraphs/{ref}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "2:5.1",
+                        "k": "param",
+                        "n": "id",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "default",
+                        "k": "query",
+                        "n": "format",
+                        "or": "format",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "include",
+                        "or": "include",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "eng",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/paragraphs/{ref}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "ref": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "paragraphs"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /paragraphs/{ref}/context",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "2:5.1",
+                        "k": "param",
+                        "n": "ref",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ],
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "default",
+                        "k": "query",
+                        "n": "format",
+                        "or": "format",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "include",
+                        "or": "include",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "eng",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 2,
+                        "k": "query",
+                        "n": "window",
+                        "or": "window",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/paragraphs/{ref}/context",
+                  "q": {
+                    "$action": "context",
+                    "exist": [
+                      "ref"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "paragraphs"
+                    },
+                    {
+                      "var": "ref"
+                    },
+                    {
+                      "lit": "context"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /paragraphs/random",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "default",
+                        "k": "query",
+                        "n": "format",
+                        "or": "format",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "include",
+                        "or": "include",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "eng",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "max_length",
+                        "or": "maxLength",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "min_length",
+                        "or": "minLength",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/paragraphs/random",
+                  "q": {
+                    "$action": "random"
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "paragraphs"
+                    },
+                    {
+                      "lit": "random"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "quote": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "quote",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "bf": [
+                    "ref",
+                    "text"
+                  ],
+                  "co": {
+                    "id": "POST /quotes/verify",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/quotes/verify",
+                  "q": {
+                    "$action": "verify"
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "quotes"
+                    },
+                    {
+                      "lit": "verify"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "scripture": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "chunk": {
+              "a": true,
+              "h": "Chunk",
+              "n": "chunk",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "closest": {
+              "a": true,
+              "h": "Closest",
+              "n": "closest",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "consensus": {
+              "a": true,
+              "h": "Consensus",
+              "n": "consensus",
+              "r": true,
+              "sh": "Mean percentile across the texts, 0 to 1",
+              "t": "`$NUMBER`"
+            },
+            "corpus": {
+              "a": true,
+              "h": "Corpus",
+              "n": "corpus",
+              "op": {
+                "create": {
+                  "req": false,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": true,
+              "sh": "Corpus id, slug, or ref prefix, e.g.",
+              "t": "`$OBJECT`"
+            },
+            "data": {
+              "a": true,
+              "h": "Data",
+              "n": "data",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "distance": {
+              "a": true,
+              "h": "Distance",
+              "n": "distance",
+              "r": true,
+              "sh": "1 minus the highest percentile, 0 to 1",
+              "t": "`$NUMBER`"
+            },
+            "divisionLabel": {
+              "a": true,
+              "h": "Division Label",
+              "n": "divisionLabel",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "divisions": {
+              "a": true,
+              "h": "Divisions",
+              "n": "divisions",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "gap": {
+              "a": true,
+              "h": "Gap",
+              "n": "gap",
+              "r": true,
+              "sh": "How far this text's percentile is above the paragraph's mean across texts",
+              "t": "`$NUMBER`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "license": {
+              "a": true,
+              "h": "License",
+              "n": "license",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "limit": {
+              "a": true,
+              "h": "Limit",
+              "n": "limit",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "meta": {
+              "a": true,
+              "h": "Meta",
+              "n": "meta",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "notes": {
+              "a": true,
+              "h": "Notes",
+              "n": "notes",
+              "r": true,
+              "sh": "How the text is numbered or selected",
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "page": {
+              "a": true,
+              "h": "Page",
+              "n": "page",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "pages": {
+              "a": true,
+              "h": "Pages",
+              "n": "pages",
+              "r": true,
+              "sh": "The reading pages of the work, in order: one division, or one subdivision for a work with three reference levels.",
+              "t": "`$ARRAY`"
+            },
+            "paragraph": {
+              "a": true,
+              "h": "Paragraph",
+              "n": "paragraph",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "passage": {
+              "a": true,
+              "h": "Passage",
+              "n": "passage",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "passageCount": {
+              "a": true,
+              "h": "Passage Count",
+              "n": "passageCount",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "passages": {
+              "a": true,
+              "h": "Passages",
+              "n": "passages",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "percentile": {
+              "a": true,
+              "h": "Percentile",
+              "n": "percentile",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "q": {
+              "a": true,
+              "h": "Q",
+              "n": "q",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "refLevels": {
+              "a": true,
+              "h": "Ref Levels",
+              "n": "refLevels",
+              "r": true,
+              "sh": "Numbers in a full ref: 1 for `Dhp 183`, 2 for `BG 2.47`, 3 for `Epictetus 3.22.5`",
+              "t": "`$INTEGER`"
+            },
+            "refPrefix": {
+              "a": true,
+              "h": "Ref Prefix",
+              "n": "refPrefix",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "religion": {
+              "a": true,
+              "h": "Religion",
+              "n": "religion",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "similarity": {
+              "a": true,
+              "h": "Similarity",
+              "n": "similarity",
+              "r": true,
+              "sh": "text-embedding-3-large cosine similarity",
+              "t": "`$NUMBER`"
+            },
+            "similaritySmall": {
+              "a": true,
+              "h": "Similarity Small",
+              "n": "similaritySmall",
+              "r": true,
+              "sh": "text-embedding-3-small cosine similarity",
+              "t": "`$NUMBER`"
+            },
+            "slug": {
+              "a": true,
+              "h": "Slug",
+              "n": "slug",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "sourceUrl": {
+              "a": true,
+              "h": "Source Url",
+              "n": "sourceUrl",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "textsClose": {
+              "a": true,
+              "h": "Texts Close",
+              "n": "textsClose",
+              "r": true,
+              "sh": "Texts that have this paragraph in their top 10%",
+              "t": "`$INTEGER`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "translator": {
+              "a": true,
+              "h": "Translator",
+              "n": "translator",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "unitLabel": {
+              "a": true,
+              "h": "Unit Label",
+              "n": "unitLabel",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "urantiaParallelLimit": {
+              "a": true,
+              "h": "Urantia Parallel Limit",
+              "n": "urantiaParallelLimit",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "urantiaParallels": {
+              "a": true,
+              "h": "Urantia Parallels",
+              "n": "urantiaParallels",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "urantiaSection": {
+              "a": true,
+              "h": "Urantia Section",
+              "n": "urantiaSection",
+              "r": true,
+              "sh": "The Paper 131 section headed with this religion, or null when Paper 131 has no such heading",
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "year": {
+              "a": true,
+              "h": "Year",
+              "n": "year",
+              "r": true,
+              "t": "`$INTEGER`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "scripture",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "bf": [
+                    "corpus",
+                    "limit",
+                    "page",
+                    "q",
+                    "urantiaParallelLimit"
+                  ],
+                  "co": {
+                    "id": "POST /scriptures/search/semantic",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/scriptures/search/semantic",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "scriptures"
+                    },
+                    {
+                      "lit": "search"
+                    },
+                    {
+                      "lit": "semantic"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /scriptures",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/scriptures",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "scriptures"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /scriptures/insights/far",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 200,
+                        "k": "query",
+                        "n": "min_length",
+                        "or": "minLength",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "ex": "2",
+                        "k": "query",
+                        "n": "paper_id",
+                        "or": "paperId",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "part_id",
+                        "or": "partId",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/scriptures/insights/far",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "scriptures"
+                    },
+                    {
+                      "lit": "insights"
+                    },
+                    {
+                      "lit": "far"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /scriptures/insights/leans",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "corpus",
+                        "or": "corpus",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "exclude_bible",
+                        "or": "excludeBible",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 200,
+                        "k": "query",
+                        "n": "min_length",
+                        "or": "minLength",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/scriptures/insights/leans",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "scriptures"
+                    },
+                    {
+                      "lit": "insights"
+                    },
+                    {
+                      "lit": "leans"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /scriptures/insights/pairs",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "corpus",
+                        "or": "corpus",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "exclude_bible",
+                        "or": "excludeBible",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 200,
+                        "k": "query",
+                        "n": "min_length",
+                        "or": "minLength",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/scriptures/insights/pairs",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "scriptures"
+                    },
+                    {
+                      "lit": "insights"
+                    },
+                    {
+                      "lit": "pairs"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /scriptures/insights/shared-currents",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 200,
+                        "k": "query",
+                        "n": "min_length",
+                        "or": "minLength",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "ex": "2",
+                        "k": "query",
+                        "n": "paper_id",
+                        "or": "paperId",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "part_id",
+                        "or": "partId",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/scriptures/insights/shared-currents",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "scriptures"
+                    },
+                    {
+                      "lit": "insights"
+                    },
+                    {
+                      "lit": "shared-currents"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /scriptures/{corpus}/{ref}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bhagavad-gita",
+                        "k": "param",
+                        "n": "corpus",
+                        "or": "corpus",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "2.47",
+                        "k": "param",
+                        "n": "ref",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/scriptures/{corpus}/{ref}",
+                  "q": {
+                    "exist": [
+                      "corpus",
+                      "ref"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "scriptures"
+                    },
+                    {
+                      "var": "corpus"
+                    },
+                    {
+                      "var": "ref"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /scriptures/{corpus}/{ref}/urantia-parallels",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bhagavad-gita",
+                        "k": "param",
+                        "n": "corpus",
+                        "or": "corpus",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "2.47",
+                        "k": "param",
+                        "n": "ref",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/scriptures/{corpus}/{ref}/urantia-parallels",
+                  "q": {
+                    "exist": [
+                      "corpus",
+                      "ref"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "scriptures"
+                    },
+                    {
+                      "var": "corpus"
+                    },
+                    {
+                      "var": "ref"
+                    },
+                    {
+                      "lit": "urantia-parallels"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /scriptures/{corpus}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bhagavad-gita",
+                        "k": "param",
+                        "n": "id",
+                        "or": "corpus",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/scriptures/{corpus}",
+                  "q": {
+                    "exist": [
+                      "id"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "corpus": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "scriptures"
+                    },
+                    {
+                      "var": "id"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "search": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "audio": {
+              "a": true,
+              "h": "Audio",
+              "n": "audio",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$OBJECT`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "bibleParallels": {
+              "a": true,
+              "h": "Bible Parallels",
+              "n": "bibleParallels",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "data": {
+              "a": true,
+              "h": "Data",
+              "n": "data",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "entities": {
+              "a": true,
+              "h": "Entities",
+              "n": "entities",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "htmlText": {
+              "a": true,
+              "h": "Html Text",
+              "n": "htmlText",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "include": {
+              "a": true,
+              "h": "Include",
+              "n": "include",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "labels": {
+              "a": true,
+              "h": "Labels",
+              "n": "labels",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$ARRAY`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "language": {
+              "a": true,
+              "h": "Language",
+              "n": "language",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "limit": {
+              "a": true,
+              "h": "Limit",
+              "n": "limit",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "match": {
+              "a": true,
+              "h": "Match",
+              "n": "match",
+              "r": true,
+              "sh": "How the paragraph matched: reference (the query named it), exact (the whole phrase), all (every word), near (every word after a typo fix, see meta.didYouMean), most (two thirds of the words or more; with type `or`, some of the words).",
+              "t": "`$STRING`"
+            },
+            "meta": {
+              "a": true,
+              "h": "Meta",
+              "n": "meta",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "page": {
+              "a": true,
+              "h": "Page",
+              "n": "page",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "paperId": {
+              "a": true,
+              "h": "Paper Id",
+              "n": "paperId",
+              "op": {
+                "list": {
+                  "req": true,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "paperTitle": {
+              "a": true,
+              "h": "Paper Title",
+              "n": "paperTitle",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "paragraphId": {
+              "a": true,
+              "h": "Paragraph Id",
+              "n": "paragraphId",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "partId": {
+              "a": true,
+              "h": "Part Id",
+              "n": "partId",
+              "op": {
+                "list": {
+                  "req": true,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "q": {
+              "a": true,
+              "h": "Q",
+              "n": "q",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "rank": {
+              "a": true,
+              "h": "Rank",
+              "n": "rank",
+              "r": true,
+              "t": "`$NUMBER`"
+            },
+            "scriptureParallels": {
+              "a": true,
+              "h": "Scripture Parallels",
+              "n": "scriptureParallels",
+              "r": false,
+              "t": "`$ARRAY`"
+            },
+            "scriptureScores": {
+              "a": true,
+              "h": "Scripture Scores",
+              "n": "scriptureScores",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$OBJECT`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "sectionId": {
+              "a": true,
+              "h": "Section Id",
+              "n": "sectionId",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "sectionTitle": {
+              "a": true,
+              "h": "Section Title",
+              "n": "sectionTitle",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "sortId": {
+              "a": true,
+              "h": "Sort Id",
+              "n": "sortId",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "standardReferenceId": {
+              "a": true,
+              "h": "Standard Reference Id",
+              "n": "standardReferenceId",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "text": {
+              "a": true,
+              "h": "Text",
+              "n": "text",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "translation": {
+              "a": true,
+              "h": "Translation",
+              "n": "translation",
+              "r": true,
+              "sh": "Present only when the text is a translation: a machine made it, and it is released as CC0.",
+              "t": "`$OBJECT`"
+            },
+            "type": {
+              "a": true,
+              "h": "Type",
+              "n": "type",
+              "r": false,
+              "t": "`$STRING`"
+            },
+            "urantiaParallels": {
+              "a": true,
+              "h": "Urantia Parallels",
+              "n": "urantiaParallels",
+              "r": false,
+              "t": "`$ARRAY`"
+            }
+          },
+          "id": {
+            "field": "id",
+            "name": "id"
+          },
+          "name": "search",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "bf": [
+                    "include",
+                    "limit",
+                    "page",
+                    "paperId",
+                    "partId",
+                    "q",
+                    "type"
+                  ],
+                  "co": {
+                    "id": "POST /search",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/search",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "search"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "bf": [
+                    "include",
+                    "limit",
+                    "page",
+                    "paperId",
+                    "partId",
+                    "q"
+                  ],
+                  "co": {
+                    "id": "POST /search/semantic",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/search/semantic",
+                  "q": {
+                    "$action": "semantic"
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "search"
+                    },
+                    {
+                      "lit": "semantic"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /search",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "include",
+                        "or": "include",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "ex": "2",
+                        "k": "query",
+                        "n": "paper_id",
+                        "or": "paperId",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "part_id",
+                        "or": "partId",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "love",
+                        "k": "query",
+                        "n": "q",
+                        "or": "q",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "auto",
+                        "k": "query",
+                        "n": "type",
+                        "or": "type",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/search",
+                  "q": {
+                    "exist": [
+                      "q"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "search"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /search/semantic",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "include",
+                        "or": "include",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "ex": "2",
+                        "k": "query",
+                        "n": "paper_id",
+                        "or": "paperId",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "part_id",
+                        "or": "partId",
+                        "r": false,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "love",
+                        "k": "query",
+                        "n": "q",
+                        "or": "q",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/search/semantic",
+                  "q": {
+                    "$action": "semantic",
+                    "exist": [
+                      "q"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "search"
+                    },
+                    {
+                      "lit": "semantic"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "table_of_content": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "parts": {
+              "a": true,
+              "h": "Parts",
+              "n": "parts",
+              "r": true,
+              "t": "`$ARRAY`"
+            }
+          },
+          "name": "table_of_content",
+          "op": {
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /toc",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "eng",
+                        "k": "query",
+                        "n": "lang",
+                        "or": "lang",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/toc",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "toc"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "tool": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {},
+          "name": "tool",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /tools/anthropic",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/tools/anthropic",
+                  "q": {
+                    "$action": "anthropic"
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "tools"
+                    },
+                    {
+                      "lit": "anthropic"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.tools`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /tools/openai",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/tools/openai",
+                  "q": {
+                    "$action": "openai"
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "tools"
+                    },
+                    {
+                      "lit": "openai"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.tools`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "work": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "data": {
+              "a": true,
+              "h": "Data",
+              "n": "data",
+              "r": true,
+              "t": "`$ARRAY`"
+            },
+            "id": {
+              "a": true,
+              "h": "Id",
+              "n": "id",
+              "r": true,
+              "sh": "The work id: \"bible\", or the slug of a text such as \"dhammapada\".",
+              "t": "`$STRING`"
+            },
+            "kind": {
+              "a": true,
+              "h": "Kind",
+              "n": "kind",
+              "r": true,
+              "sh": "\"scripture\": read as sacred by its tradition.",
+              "t": "`$STRING`"
+            },
+            "limit": {
+              "a": true,
+              "h": "Limit",
+              "n": "limit",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "match": {
+              "a": true,
+              "h": "Match",
+              "n": "match",
+              "r": false,
+              "sh": "Keyword search: how it matched.",
+              "t": "`$STRING`"
+            },
+            "meta": {
+              "a": true,
+              "h": "Meta",
+              "n": "meta",
+              "r": true,
+              "t": "`$OBJECT`"
+            },
+            "page": {
+              "a": true,
+              "h": "Page",
+              "n": "page",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "q": {
+              "a": true,
+              "h": "Q",
+              "n": "q",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "refPrefix": {
+              "a": true,
+              "h": "Ref Prefix",
+              "n": "refPrefix",
+              "r": true,
+              "sh": "The prefix of its references, such as \"Dhp\".",
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "reference": {
+              "a": true,
+              "h": "Reference",
+              "n": "reference",
+              "r": true,
+              "sh": "\"John 3:16\", \"Dhp 183\", \"BG 2.47-49\" (a chunk in semantic search).",
+              "t": "`$STRING`"
+            },
+            "religion": {
+              "a": true,
+              "h": "Religion",
+              "n": "religion",
+              "r": true,
+              "sh": "The same as `tradition`, kept for older clients.",
+              "t": "`$STRING`"
+            },
+            "similarity": {
+              "a": true,
+              "h": "Similarity",
+              "n": "similarity",
+              "r": false,
+              "sh": "Semantic search: cosine similarity.",
+              "t": "`$NUMBER`"
+            },
+            "strength": {
+              "a": true,
+              "h": "Strength",
+              "n": "strength",
+              "r": false,
+              "sh": "How close the result is: strong (most right answers score this), related, or weak (likely off the topic).",
+              "t": "`$STRING`"
+            },
+            "summary": {
+              "a": true,
+              "h": "Summary",
+              "n": "summary",
+              "r": true,
+              "sh": "One plain sentence on what the work is.",
+              "t": "`$STRING`"
+            },
+            "text": {
+              "a": true,
+              "h": "Text",
+              "n": "text",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "title": {
+              "a": true,
+              "h": "Title",
+              "n": "title",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "tradition": {
+              "a": true,
+              "h": "Tradition",
+              "n": "tradition",
+              "r": true,
+              "sh": "The people or the religion of the work: \"Buddhist\", \"Norse\", \"Ancient Greek\".",
+              "t": "`$STRING`"
+            },
+            "translator": {
+              "a": true,
+              "h": "Translator",
+              "n": "translator",
+              "r": true,
+              "t": "`$STRING`"
+            },
+            "unitLabel": {
+              "a": true,
+              "h": "Unit Label",
+              "n": "unitLabel",
+              "r": true,
+              "sh": "The word for one unit of the work: \"verse\", \"section\", \"pauri\".",
+              "t": "`$STRING`"
+            },
+            "units": {
+              "a": true,
+              "h": "Units",
+              "n": "units",
+              "r": true,
+              "t": "`$INTEGER`"
+            },
+            "urantiaParallelLimit": {
+              "a": true,
+              "h": "Urantia Parallel Limit",
+              "n": "urantiaParallelLimit",
+              "r": false,
+              "t": "`$INTEGER`"
+            },
+            "urantiaParallels": {
+              "a": true,
+              "h": "Urantia Parallels",
+              "n": "urantiaParallels",
+              "r": true,
+              "sh": "The nearest Urantia paragraphs (semantic parallels, not curated ones).",
+              "t": "`$ARRAY`"
+            },
+            "urantiaSection": {
+              "a": true,
+              "h": "Urantia Section",
+              "n": "urantiaSection",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "url": {
+              "a": true,
+              "h": "Url",
+              "n": "url",
+              "r": true,
+              "sh": "The public page that holds the text, or null.",
+              "t": [
+                "`$ONE`",
+                [
+                  "`$STRING`",
+                  "`$NULL`"
+                ]
+              ]
+            },
+            "work": {
+              "a": true,
+              "h": "Work",
+              "n": "work",
+              "op": {
+                "list": {
+                  "req": true,
+                  "type": "`$OBJECT`"
+                }
+              },
+              "r": false,
+              "sh": "One work only: \"bible\" or a work id such as \"dhammapada\".",
+              "t": "`$STRING`"
+            },
+            "year": {
+              "a": true,
+              "h": "Year",
+              "n": "year",
+              "r": true,
+              "t": [
+                "`$ONE`",
+                [
+                  "`$INTEGER`",
+                  "`$NULL`"
+                ]
+              ]
+            }
+          },
+          "id": {
+            "field": "id",
+            "from": {
+              "work": "work.id"
+            },
+            "name": "id",
+            "parts": [
+              "work",
+              "ref"
+            ],
+            "sep": "/"
+          },
+          "name": "work",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "bf": [
+                    "limit",
+                    "page",
+                    "q",
+                    "urantiaParallelLimit",
+                    "work"
+                  ],
+                  "co": {
+                    "id": "POST /works/search",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/works/search",
+                  "q": {
+                    "$action": "search"
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "works"
+                    },
+                    {
+                      "lit": "search"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                },
+                {
+                  "a": true,
+                  "bf": [
+                    "limit",
+                    "page",
+                    "q",
+                    "urantiaParallelLimit",
+                    "work"
+                  ],
+                  "co": {
+                    "id": "POST /works/search/semantic",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/works/search/semantic",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "works"
+                    },
+                    {
+                      "lit": "search"
+                    },
+                    {
+                      "lit": "semantic"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            },
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /works/search",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "ex": "love",
+                        "k": "query",
+                        "n": "q",
+                        "or": "q",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 3,
+                        "k": "query",
+                        "n": "urantia_parallel_limit",
+                        "or": "urantiaParallelLimit",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "work",
+                        "or": "work",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/works/search",
+                  "q": {
+                    "$action": "search",
+                    "exist": [
+                      "q"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "works"
+                    },
+                    {
+                      "lit": "search"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /works/search/semantic",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": 20,
+                        "k": "query",
+                        "n": "limit",
+                        "or": "limit",
+                        "r": false,
+                        "t": "`$INTEGER`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 0,
+                        "k": "query",
+                        "n": "page",
+                        "or": "page",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "ex": "love",
+                        "k": "query",
+                        "n": "q",
+                        "or": "q",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": 3,
+                        "k": "query",
+                        "n": "urantia_parallel_limit",
+                        "or": "urantiaParallelLimit",
+                        "r": false,
+                        "t": [
+                          "`$ONE`",
+                          [
+                            "`$INTEGER`",
+                            "`$NULL`"
+                          ]
+                        ]
+                      },
+                      {
+                        "a": true,
+                        "k": "query",
+                        "n": "work",
+                        "or": "work",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/works/search/semantic",
+                  "q": {
+                    "exist": [
+                      "q"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "works"
+                    },
+                    {
+                      "lit": "search"
+                    },
+                    {
+                      "lit": "semantic"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /works",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/works",
+                  "q": {},
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "works"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                }
+              ]
+            },
+            "load": {
+              "input": "data",
+              "name": "load",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /works/{work}/{ref}/urantia-parallels",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bhagavad-gita",
+                        "k": "param",
+                        "n": "id",
+                        "or": "work",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "2.47",
+                        "k": "param",
+                        "n": "ref",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/works/{work}/{ref}/urantia-parallels",
+                  "q": {
+                    "$action": "urantia_parallel",
+                    "exist": [
+                      "id",
+                      "ref"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "work": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "works"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "var": "ref"
+                    },
+                    {
+                      "lit": "urantia-parallels"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /works/{work}/{ref}/work-parallels",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "bhagavad-gita",
+                        "k": "param",
+                        "n": "id",
+                        "or": "work",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "2.47",
+                        "k": "param",
+                        "n": "ref",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/works/{work}/{ref}/work-parallels",
+                  "q": {
+                    "$action": "work_parallel",
+                    "exist": [
+                      "id",
+                      "ref"
+                    ]
+                  },
+                  "r": {
+                    "param": {
+                      "work": "id"
+                    }
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "works"
+                    },
+                    {
+                      "var": "id"
+                    },
+                    {
+                      "var": "ref"
+                    },
+                    {
+                      "lit": "work-parallels"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body.data`"
+                  }
+                },
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /works/{work}/{ref}",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "params": [
+                      {
+                        "a": true,
+                        "ex": "2.47",
+                        "k": "param",
+                        "n": "ref",
+                        "or": "ref",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "bhagavad-gita",
+                        "k": "param",
+                        "n": "work",
+                        "or": "work",
+                        "r": true,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/works/{work}/{ref}",
+                  "q": {
+                    "exist": [
+                      "ref",
+                      "work"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [
+                    {
+                      "lit": "works"
+                    },
+                    {
+                      "var": "work"
+                    },
+                    {
+                      "var": "ref"
+                    }
+                  ],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "ratelimit": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "burst": 5,
+              "rate": 5
+            },
+            "optspec": {
+              "now": "`$FUNCTION`",
+              "sleep": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "description": "Client-side rate limiting via a token bucket",
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "ratelimit",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Rate limiting",
+          "transport": "wrap",
+          "version": "0.0.1"
+        },
+        "retry": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "factor": 2,
+              "maxDelay": 2000,
+              "minDelay": 50,
+              "retries": 2,
+              "statuses": [
+                408,
+                425,
+                429,
+                500,
+                502,
+                503,
+                504
+              ]
+            },
+            "optspec": {
+              "jitter": "`$BOOLEAN`",
+              "sleep": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "description": "Automatic retry of transient failures with exponential backoff",
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "retry",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Retry",
+          "transport": "wrap",
+          "version": "0.0.1"
+        },
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        },
+        "timeout": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "ms": 30000
+            },
+            "optspec": {
+              "clearTimer": "`$FUNCTION`",
+              "now": "`$FUNCTION`",
+              "setTimer": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "description": "Per-request timeout with transport abort",
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "timeout",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Timeout",
+          "transport": "wrap",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicAudioFlow": {
+          "active": true,
+          "entity": "audio",
+          "key$": "BasicAudioFlow",
+          "kind": "basic",
+          "name": "BasicAudioFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "audio_ref01",
+                "srcdatavar": "audio_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "audio01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-audio_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicBibleFlow": {
+          "active": true,
+          "entity": "bible",
+          "key$": "BasicBibleFlow",
+          "kind": "basic",
+          "name": "BasicBibleFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "bible_ref01"
+              },
+              "m": {
+                "book_code": "book_code01",
+                "chapter": "chapter01"
+              },
+              "o": "create",
+              "s": [],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "bible_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "bible_ref01",
+                "srcdatavar": "bible_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "bible01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-bible_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicCitationFlow": {
+          "active": true,
+          "entity": "citation",
+          "key$": "BasicCitationFlow",
+          "kind": "basic",
+          "name": "BasicCitationFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "citation_ref01",
+                "srcdatavar": "citation_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-citation_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicEmbeddingFlow": {
+          "active": true,
+          "entity": "embedding",
+          "key$": "BasicEmbeddingFlow",
+          "kind": "basic",
+          "name": "BasicEmbeddingFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "embedding_ref01",
+                "srcdatavar": "embedding_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-embedding_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicEntityFlow": {
+          "active": true,
+          "entity": "entity",
+          "key$": "BasicEntityFlow",
+          "kind": "basic",
+          "name": "BasicEntityFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "entity_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "entity_ref01",
+                "srcdatavar": "entity_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "entity01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-entity_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicFeedbackFlow": {
+          "active": true,
+          "entity": "feedback",
+          "key$": "BasicFeedbackFlow",
+          "kind": "basic",
+          "name": "BasicFeedbackFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "feedback_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        },
+        "BasicLanguageFlow": {
+          "active": true,
+          "entity": "language",
+          "key$": "BasicLanguageFlow",
+          "kind": "basic",
+          "name": "BasicLanguageFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "language_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicOgnFlow": {
+          "active": true,
+          "entity": "ogn",
+          "key$": "BasicOgnFlow",
+          "kind": "basic",
+          "name": "BasicOgnFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "ogn_ref01",
+                "srcdatavar": "ogn_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "ogn01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-ogn_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicPaperFlow": {
+          "active": true,
+          "entity": "paper",
+          "key$": "BasicPaperFlow",
+          "kind": "basic",
+          "name": "BasicPaperFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "paper_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "paper_ref01",
+                "srcdatavar": "paper_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "paper01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-paper_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicParagraphFlow": {
+          "active": true,
+          "entity": "paragraph",
+          "key$": "BasicParagraphFlow",
+          "kind": "basic",
+          "name": "BasicParagraphFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "paragraph_ref01",
+                "srcdatavar": "paragraph_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-paragraph_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicQuoteFlow": {
+          "active": true,
+          "entity": "quote",
+          "key$": "BasicQuoteFlow",
+          "kind": "basic",
+          "name": "BasicQuoteFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "quote_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        },
+        "BasicScriptureFlow": {
+          "active": true,
+          "entity": "scripture",
+          "key$": "BasicScriptureFlow",
+          "kind": "basic",
+          "name": "BasicScriptureFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "scripture_ref01"
+              },
+              "m": {
+                "corpus": "corpus01"
+              },
+              "o": "create",
+              "s": [],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "scripture_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "scripture_ref01",
+                "srcdatavar": "scripture_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "scripture01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-scripture_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicSearchFlow": {
+          "active": true,
+          "entity": "search",
+          "key$": "BasicSearchFlow",
+          "kind": "basic",
+          "name": "BasicSearchFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "search_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "search_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicTableOfContentFlow": {
+          "active": true,
+          "entity": "table_of_content",
+          "key$": "BasicTableOfContentFlow",
+          "kind": "basic",
+          "name": "BasicTableOfContentFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "table_of_content_ref01",
+                "srcdatavar": "table_of_content_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {},
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-table_of_content_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicToolFlow": {
+          "active": true,
+          "entity": "tool",
+          "key$": "BasicToolFlow",
+          "kind": "basic",
+          "name": "BasicToolFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "tool_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicWorkFlow": {
+          "active": true,
+          "entity": "work",
+          "key$": "BasicWorkFlow",
+          "kind": "basic",
+          "name": "BasicWorkFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "work_ref01"
+              },
+              "m": {
+                "work": "work01"
+              },
+              "o": "create",
+              "s": [],
+              "v": []
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "work_ref01"
+                  }
+                }
+              ]
+            },
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "work_ref01",
+                "srcdatavar": "work_ref01_data",
+                "suffix": "_dt0"
+              },
+              "m": {
+                "id": "work01",
+                "work": "work01"
+              },
+              "o": "load",
+              "s": [],
+              "v": [
+                {
+                  "apply": "TextFieldMark",
+                  "def": {
+                    "mark": "Mark01-work_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "info": {
+        "auth": false,
+        "contact": {
+          "email": "kelson@urantia.dev",
+          "name": "urantia.dev",
+          "url": "https://docs.urantia.dev/help"
+        },
+        "description": "An API and MCP server for the Urantia Papers. Structured access to all 197 papers and more than 14,500 paragraphs, with full-text and semantic search, named entities, cross-references to public domain texts of the world's religions, and audio. No key needed. Docs: https://docs.urantia.dev",
+        "license": {
+          "name": "MIT",
+          "url": "https://github.com/urantia-hub/urantia-dev-api/blob/main/LICENSE"
+        },
+        "servers": [
+          {
+            "description": "Production",
+            "url": "https://api.urantia.dev"
+          },
+          {
+            "description": "Local development",
+            "url": "http://localhost:3000"
+          }
+        ],
+        "summary": "An API and MCP server for the Urantia Papers.",
+        "termsOfService": "https://docs.urantia.dev/terms-of-service",
+        "title": "Urantia Papers API",
+        "version": "1.0.0",
+        "website": "https://urantia.dev"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,patch,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "publisher": {
+        "name": "",
+        "security": "",
+        "url": ""
+      },
+      "repo": {
+        "host": "github.com",
+        "path": ""
+      },
+      "target": {
+        "go": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [
+              "test/feature_test.go"
+            ],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "urantia-papers",
+            "package": "",
+            "path": ""
+          },
+          "name": "go",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/runner_test.go",
+            "test/struct_runner_test.go"
+          ],
+          "title": "Golang"
+        },
+        "go-cli": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "urantia-papers",
+            "package": "",
+            "path": ""
+          },
+          "name": "go-cli",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            },
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "provides": {},
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "root"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [],
+          "title": "Go CLI"
+        },
+        "go-mcp": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "urantia-papers",
+            "package": "",
+            "path": ""
+          },
+          "name": "go-mcp",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            },
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "provides": {},
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "root"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [],
+          "title": "Go MCP server",
+          "tool": {
+            "write": false
+          }
+        },
+        "lua": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "--"
+          },
+          "deps": {
+            "dkjson": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.5"
+            }
+          },
+          "ext": "lua",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "urantia-papers",
+            "package": "",
+            "path": ""
+          },
+          "name": "lua",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "luarocks",
+              "package": "",
+              "state": "pending",
+              "url": "https://luarocks.org",
+              "vault": {
+                "alias": "luarocks",
+                "env": "LUAROCKS_API_KEY",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.lua"
+          ],
+          "title": "Lua"
+        },
+        "php": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "php",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "urantia-papers",
+            "package": "",
+            "path": ""
+          },
+          "name": "php",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "packagist",
+              "package": "",
+              "state": "pending",
+              "url": "https://packagist.org",
+              "vault": {
+                "alias": "packagist",
+                "env": "PACKAGIST_API_TOKEN",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/StructRunner.php"
+          ],
+          "title": "PHP"
+        },
+        "py": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "requests": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.33"
+            }
+          },
+          "ext": "py",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "urantia-papers",
+            "package": "",
+            "path": ""
+          },
+          "name": "py",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "pypi",
+              "package": "",
+              "state": "pending",
+              "url": "https://pypi.org",
+              "vault": {
+                "alias": "pypi",
+                "env": "",
+                "recipe": "pypi"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.py"
+          ],
+          "title": "Python"
+        },
+        "rb": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "json": {
+              "active": true,
+              "kind": "prod",
+              "version": "*"
+            }
+          },
+          "ext": "rb",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "urantia-papers",
+            "package": "",
+            "path": ""
+          },
+          "name": "rb",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "rubygems",
+              "package": "",
+              "state": "pending",
+              "url": "https://rubygems.org",
+              "vault": {
+                "alias": "gem",
+                "env": "",
+                "recipe": "gem"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.rb"
+          ],
+          "title": "Ruby"
+        },
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "urantia-papers",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      },
+      "text": {
+        "about_md": "",
+        "docs_url": "",
+        "entity_desc": {},
+        "homepage": "",
+        "meta_source": "",
+        "summary": "",
+        "tagline": "",
+        "title": "",
+        "website": ""
+      }
+    }
+  },
+  "name": "urantia-papers",
+  "origin": "voxgig-sdk"
+}

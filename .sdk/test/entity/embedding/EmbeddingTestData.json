@@ -1,0 +1,49 @@
+{
+  "existing": {
+    "embedding": {
+      "EMBEDDING00": {
+        "dimensions": 50,
+        "embedding": [],
+        "id": "EMBEDDING00",
+        "model": "s35",
+        "standardReferenceId": "s36"
+      },
+      "EMBEDDING01": {
+        "dimensions": 100,
+        "embedding": [],
+        "id": "EMBEDDING01",
+        "model": "s67",
+        "standardReferenceId": "s68"
+      },
+      "EMBEDDING02": {
+        "dimensions": 150,
+        "embedding": [],
+        "id": "EMBEDDING02",
+        "model": "s99",
+        "standardReferenceId": "s9a"
+      }
+    }
+  },
+  "new": {
+    "embedding": {
+      "embedding_ref01": {
+        "dimensions": 200,
+        "embedding": [],
+        "model": "scb",
+        "standardReferenceId": "scc"
+      }
+    }
+  },
+  "requests": {
+    "GET /embeddings/{ref}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /embeddings/export": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "citation": {
+      "CITATION00": {
+        "citation": "s1e",
+        "ref": "s1f",
+        "style": "s20",
+        "id": "CITATION00"
+      },
+      "CITATION01": {
+        "citation": "s3c",
+        "ref": "s3d",
+        "style": "s3e",
+        "id": "CITATION01"
+      },
+      "CITATION02": {
+        "citation": "s5a",
+        "ref": "s5b",
+        "style": "s5c",
+        "id": "CITATION02"
+      }
+    }
+  },
+  "new": {
+    "citation": {
+      "citation_ref01": {
+        "citation": "s78",
+        "ref": "s79",
+        "style": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /cite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

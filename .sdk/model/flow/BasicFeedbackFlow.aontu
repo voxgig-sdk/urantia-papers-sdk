@@ -1,0 +1,18 @@
+# BasicFeedbackFlow
+
+main: kit: flow: BasicFeedbackFlow:
+{
+  entity: "feedback",
+  kind: "basic",
+  name: "BasicFeedbackFlow",
+  step: [
+    {
+      i: {
+        ref: "feedback_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicFeedbackFlow"
+}

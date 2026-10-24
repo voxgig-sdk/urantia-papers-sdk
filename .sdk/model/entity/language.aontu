@@ -1,0 +1,67 @@
+# Entity: language
+
+main: kit: entity: language: {
+
+  alias: field: {}
+
+  fields: {
+    code: {
+      h: "Code"
+      n: "code"
+      r: true
+      t: "`$STRING`"
+    }
+    entityCount: {
+      h: "Entity Count"
+      n: "entityCount"
+      r: true
+      t: "`$INTEGER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    paragraphCount: {
+      h: "Paragraph Count"
+      n: "paragraphCount"
+      r: true
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "language"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /languages"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/languages"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "languages"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

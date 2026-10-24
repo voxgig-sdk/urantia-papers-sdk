@@ -1,0 +1,18 @@
+# Flows
+
+@"./BasicAudioFlow.aontu"
+@"./BasicBibleFlow.aontu"
+@"./BasicCitationFlow.aontu"
+@"./BasicEmbeddingFlow.aontu"
+@"./BasicEntityFlow.aontu"
+@"./BasicFeedbackFlow.aontu"
+@"./BasicLanguageFlow.aontu"
+@"./BasicOgnFlow.aontu"
+@"./BasicPaperFlow.aontu"
+@"./BasicParagraphFlow.aontu"
+@"./BasicQuoteFlow.aontu"
+@"./BasicScriptureFlow.aontu"
+@"./BasicSearchFlow.aontu"
+@"./BasicTableOfContentFlow.aontu"
+@"./BasicToolFlow.aontu"
+@"./BasicWorkFlow.aontu"

@@ -1,0 +1,32 @@
+# BasicOgnFlow
+
+main: kit: flow: BasicOgnFlow:
+{
+  entity: "ogn",
+  kind: "basic",
+  name: "BasicOgnFlow",
+  step: [
+    {
+      i: {
+        ref: "ogn_ref01",
+        srcdatavar: "ogn_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "ogn01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-ogn_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOgnFlow"
+}
